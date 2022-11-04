@@ -2,13 +2,13 @@
 beam.obj
 
 *surfaceDensity
-24
+60
 
 *tensileStiffness
-1050000000
+262500
 
 *shearStiffness
-1050000000
+262500
 
 *bendStiffness
 0.0
