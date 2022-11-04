@@ -12,7 +12,7 @@
 	      <remap from="/tip_pose" to="/$(arg system1)/tip_pose"/>
 	    </node>
   	</group>    
-    <node pkg="vega_simulator" type="rl_control.py" name="controller" output="screen" />
+    <!-- <node pkg="vega_simulator" type="rl_control.py" name="controller" output="screen" /> -->
 
 
 </launch>

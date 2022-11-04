@@ -208,9 +208,3 @@ include_directories(
 
 add_executable(actual_simulator src/actual_system.cpp)
 target_link_libraries(actual_simulator ${catkin_LIBRARIES})
-
-add_executable(control_simulator src/control_predictor.cpp)
-target_link_libraries(control_simulator ${catkin_LIBRARIES})
-
-add_executable(workSpace_simulator src/workspace_step_predictor.cpp)
-target_link_libraries(workSpace_simulator ${catkin_LIBRARIES})

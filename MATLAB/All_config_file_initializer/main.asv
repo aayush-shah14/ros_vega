@@ -5,14 +5,14 @@ clc
 %beam dimensions and mesh size
 global meshSize L_by_width Beam_width depth  
 meshSize=4;
-L_by_width=15;
+L_by_width=20;
 Beam_width=0.05;
-depth=0.05;
+depth=0.02;
 
 %material properties
 global density youngsModulus StifferYoungModulus gravity gravity_direction
 density=1200;
-youngsModulus=1.4*10^7;
+youngsModulus=1.4*10^9;
 % youngsModulus=8/(3*depth);
 StifferYoungModulus=2.05*10^9; %based on what variation is needed in the Kfile
 gravity=0.000;
@@ -26,7 +26,7 @@ initialPose=false;
 
 %continium robot param
 global nSection force_ramp impulse_force timed_force
-nSection=5;
+nSection=1;
 
 impulse_force=0;
 force_ramp=0;% 1 for true and 0 for false
@@ -62,9 +62,9 @@ gravityFile();
 vegaConfigurationFile();
 
 %% creating the stiffness file for massSpringSystem.cpp
-% sameStiffness();
+sameStiffness();
 % TwoRigidBarAlongWidthStiffness();
-nRigidBarAlongWidthStiffness();
+% nRigidBarAlongWidthStiffness();
 
 %% writing config file for matalb to read while analyzing vega data
 % matlabConfigforReadingData();

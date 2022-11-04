@@ -77,60 +77,28 @@ MassSpringSystem::MassSpringSystem(int numParticles_, double * restPositions_, i
   int count=0;
 
   //read the stifness file
-  std::ifstream KFfile("k_finer.csv");
-  std::ifstream KCfile("k_coarse.csv");
-  string word;
-  KFfile>>word;
-  int finerCount=stoi(word);
-  KCfile>>word;
-  int coarseCount=stoi(word);
-  if(finerCount==numQuads)
+  std::ifstream Kfile("k.csv");
+  if (Kfile.is_open()) 
   {
-    if (KFfile.is_open()) 
+    cout<<"reading the stifness file."<<endl;
+    string word;
+    int count_materials=0;
+    while(Kfile>>word)
     {
-      cout<<"reading the stifness file."<<endl;
-      int count_materials=0;
-      while(KFfile>>word)
-      {
-        groupStiffness_[count_materials]=stod(word);
-        count_materials++;
-      }
-      cout<<"the count of number of stifness specified in the file is:"<<count_materials<<endl;
-      if(count_materials!=numMaterialGroups_)
-      {
-        cout<<"number of stifness specified doesnt match the number of faces!! check the  file again"<<endl;
-        exit(1);
-      }
+      groupStiffness_[count_materials]=stod(word);
+      count_materials++;
     }
-    else
+    cout<<"the count of number of stifness specified in the file is:"<<count_materials<<endl;
+    if(count_materials!=numMaterialGroups_)
     {
-      cout<<"error opening the stiffness file"<<endl;
+      cout<<"number of stifness specified doesnt match the number of faces!! check the  file again"<<endl;
       exit(1);
     }
   }
   else
   {
-    if (KCfile.is_open()) 
-    {
-      cout<<"reading the stifness file."<<endl;
-      int count_materials=0;
-      while(KCfile>>word)
-      {
-        groupStiffness_[count_materials]=stod(word);
-        count_materials++;
-      }
-      cout<<"the count of number of stifness specified in the file is:"<<count_materials<<endl;
-      if(count_materials!=numMaterialGroups_)
-      {
-        cout<<"number of stifness specified doesnt match the number of faces!! check the  file again"<<endl;
-        exit(1);
-      }
-    }
-    else
-    {
-      cout<<"error opening the stiffness file"<<endl;
-      exit(1);
-    }
+    cout<<"error opening the stiffness file"<<endl;
+    exit(1);
   }
 
   // Generate springs:

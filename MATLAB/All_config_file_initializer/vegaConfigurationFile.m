@@ -1,6 +1,5 @@
 function[]=vegaConfigurationFile()
-   global meshSize_finer meshSize_coarse Beam_width force_ramp time_for_full_load impulse_force timed_force
-   meshSize=meshSize_finer;
+   global meshSize Beam_width force_ramp time_for_full_load impulse_force timed_force
 	str="";
     str=str+(meshSize+1)+" ";
     str=str+Beam_width+ " ";
@@ -9,22 +8,8 @@ function[]=vegaConfigurationFile()
     str=str+impulse_force+" ";
     str=str+timed_force+" ";
     Lines=[str];
-	fid = fopen('../../vega_simulator/config/vegaConfigurations_finer.csv', 'wt');
+	fid = fopen('../../vega_simulator/config/vegaConfigurations.csv', 'wt');
 	fprintf(fid,'%s\n',Lines);
 	fclose(fid);
-	disp("vegaConfigurations_finer.csv files has been created")
-    
-    meshSize=meshSize_coarse;
-    str="";
-    str=str+(meshSize+1)+" ";
-    str=str+Beam_width+ " ";
-    str=str+force_ramp+" ";
-    str=str+time_for_full_load+" ";
-    str=str+impulse_force+" ";
-    str=str+timed_force+" ";
-    Lines=[str];
-	fid = fopen('../../vega_simulator/config/vegaConfigurations_coarse.csv', 'wt');
-	fprintf(fid,'%s\n',Lines);
-	fclose(fid);
-	disp("vegaConfigurations_coarse.csv files has been created")
+	disp("vegaConfigurations.csv files has been created")
 end

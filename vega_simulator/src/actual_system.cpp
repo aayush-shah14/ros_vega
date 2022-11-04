@@ -219,100 +219,71 @@ void stopDeformations_buttonCallBack(int code);
 //font is, for example, GLUT_BITMAP_9_BY_15
 void resetCallBack(std_msgs::Bool msg)
 {
-    if(msg.data == true)
-    { double q_system[3*n_tot]= { 0.0 };
-      integratorBaseSparse->SetExternalForces(q_system);
-      integratorBaseSparse->GetqState(q_system,NULL,NULL);
-      integratorBaseSparse->SetqState(q_system,q_system,q_system);
-     }
-
-      reset_msg.data = false;
-      episode_reset_pub.publish(reset_msg);
-
-      q_=integratorBase->Getq();
-      std_msgs::Float32MultiArray state_msg;
-      {
-        x=0.0;
-        for(int gg=0;gg<n_x;gg++)
-        {
-          if(gg==0 || gg==(n_x-1))
-            x=x+q_[3*(n_tot-n_x+gg)]*2; 
-          else
-            x=x+q_[3*(n_tot-n_x+gg)];
-        }
-        x=x/(2+n_x);
-
-        y=0.0;
-        for(int gg=0;gg<n_x;gg++)
-        {
-          if(gg==0 || gg==(n_x-1))
-            y=y+q_[3*(n_tot-n_x+gg)+1]*2;
-          else
-            y=y+q_[3*(n_tot-n_x+gg)+1];
-        }
-        y=y/(2+n_x);
-     }
-      
-      state_msg.data.push_back(x);
-      state_msg.data.push_back(y);
-      
-      state_pub.publish(state_msg);
-
+  if(msg.data == true)
+  { double q_system[3*n_tot]= { 0.0 };
+    integratorBaseSparse->SetExternalForces(q_system);
+    integratorBaseSparse->SetqState(q_system,q_system,q_system);
+  }
+  reset_msg.data = false;
+  episode_reset_pub.publish(reset_msg);
+  q_=integratorBase->Getq();
+  std_msgs::Float32MultiArray state_msg;
+  x=0.0;
+  y=0.0;
+  state_msg.data.push_back(x);
+  state_msg.data.push_back(y);
+  state_pub.publish(state_msg);
 }
 void forceCallBack(const std_msgs::Float32MultiArray msg)
 {
-    // storing prev value
-    q_prev=integratorBase->Getq();
-    
-   
-    // Added this for adding forces at each time step
-    F1 = msg.data[0];
-    F2 = msg.data[1];
+  // storing prev value
+  q_prev=integratorBase->Getq();
 
-    double denom1 = sqrt(square(x1_support-x1_init- q_prev[3*(start_index1+3)+0]) + square(y1_support-y1_init- q_prev[3*(start_index1+3)+1]));
-    double denom2 = sqrt(square(x2_support-x2_init- q_prev[3*(start_index2+3)+0]) + square(y2_support-y2_init- q_prev[3*(start_index2+3)+1]));
+  // Added this for adding forces at each time step
+  F1 = msg.data[0];
+  F2 = msg.data[1];
 
-    double f1_x = F1 * ((x1_support-x1_init - q_prev[3*(start_index1+3)+0])/denom1);
-    double f1_y = F1 * ((y1_support-y1_init - q_prev[3*(start_index1+3)+1])/denom1);
-    // double F1_new = sqrt(square(f1_x) + square(f1_y));
+  double denom1 = sqrt(square(x1_support-x1_init- q_prev[3*(start_index1+3)+0]) + square(y1_support-y1_init- q_prev[3*(start_index1+3)+1]));
+  double denom2 = sqrt(square(x2_support-x2_init- q_prev[3*(start_index2+3)+0]) + square(y2_support-y2_init- q_prev[3*(start_index2+3)+1]));
 
-    double f2_x = F2 * ((x2_support-x2_init - q_prev[3*(start_index2+3)+0])/denom2);
-    double f2_y = F2 * ((y2_support-y2_init - q_prev[3*(start_index2+3)+1])/denom2);
-    // double F2_new = sqrt(square(f2_x) + square(f2_y));
+  double f1_x = F1 * ((x1_support-x1_init - q_prev[3*(start_index1+3)+0])/denom1);
+  double f1_y = F1 * ((y1_support-y1_init - q_prev[3*(start_index1+3)+1])/denom1);
+  // double F1_new = sqrt(square(f1_x) + square(f1_y));
 
-    for(int i=0;i<n_x;i+=1)
-      { if( i == 0 || i==(n_x-1))
-          {
-            // cout<<start_index2+i<<endl;
-            f_ext[3*(start_index1+i)+0] = f1_x/((n_x-2)*2 + 2);
-            f_ext[3*(start_index1+i)+1] = f1_y/((n_x-2)*2 + 2);
-            f_ext[3*(start_index2+i)+0] = f2_x/((n_x-2)*2 + 2);
-            f_ext[3*(start_index2+i)+1] = f2_y/((n_x-2)*2 + 2);
-          }
-        else
-          {
-            f_ext[3*(start_index1+i)+0] = 2*f1_x/((n_x-2)*2 + 2);
-            f_ext[3*(start_index1+i)+1] = 2*f1_y/((n_x-2)*2 + 2);
-            f_ext[3*(start_index2+i)+0] = 2*f2_x/((n_x-2)*2 + 2);
-            f_ext[3*(start_index2+i)+1] = 2*f2_y/((n_x-2)*2 + 2);
-          }
-    }
+  double f2_x = F2 * ((x2_support-x2_init - q_prev[3*(start_index2+3)+0])/denom2);
+  double f2_y = F2 * ((y2_support-y2_init - q_prev[3*(start_index2+3)+1])/denom2);
+  // double F2_new = sqrt(square(f2_x) + square(f2_y));
 
-  integratorBaseSparse->SetExternalForces(f_ext);
-
-  ros::Rate rate(1/timeStep);
-  for(int i=0; i<substepsPerTimeStep; i++)
+  for(int i=0;i<n_x;i+=1)
   { 
-    //integratorBaseSparse->SetExternalForces(f_ext);
-    int code = integratorBase->DoTimestep();
-    fflush(nullptr);
-    subTimestepCounter++;
+    if( i == 0 || i==(n_x-1))
+    {
+      // cout<<start_index2+i<<endl;
+      f_ext[3*(start_index1+i)+0] = f1_x/((n_x-2)*2 + 2);
+      f_ext[3*(start_index1+i)+1] = f1_y/((n_x-2)*2 + 2);
+      f_ext[3*(start_index2+i)+0] = f2_x/((n_x-2)*2 + 2);
+      f_ext[3*(start_index2+i)+1] = f2_y/((n_x-2)*2 + 2);
+    }
+    else
+    {
+      f_ext[3*(start_index1+i)+0] = 2*f1_x/((n_x-2)*2 + 2);
+      f_ext[3*(start_index1+i)+1] = 2*f1_y/((n_x-2)*2 + 2);
+      f_ext[3*(start_index2+i)+0] = 2*f2_x/((n_x-2)*2 + 2);
+      f_ext[3*(start_index2+i)+1] = 2*f2_y/((n_x-2)*2 + 2);
+    }
   }
 
-
+  integratorBaseSparse->SetExternalForces(f_ext);
+  for(int i=0; i<substepsPerTimeStep; i++)
+  { 
+  //integratorBaseSparse->SetExternalForces(f_ext);
+  int code = integratorBase->DoTimestep();
+  fflush(nullptr);
+  subTimestepCounter++;
+  }
   timestepCounter++;
   q_=integratorBase->Getq();
-  
+
   // calculating the new x and y
   {
     x=0.0;
@@ -335,6 +306,7 @@ void forceCallBack(const std_msgs::Float32MultiArray msg)
     }
     y=y/(2+n_x);
   }
+
   std_msgs::Float32MultiArray state_msg;
   //for(int i=0;i<n;i++)
   //{
@@ -344,7 +316,6 @@ void forceCallBack(const std_msgs::Float32MultiArray msg)
   state_msg.data.push_back(x);
   state_msg.data.push_back(y);
   ros::spinOnce();
-  rate.sleep();
   state_pub.publish(state_msg);
   //pose_pub_msg.data={x};
   //pose_pub.publish(pose_pub_msg);
@@ -360,8 +331,8 @@ void idleFunction(void)
   cout<<"node initialized. Subscribed to force"<<endl;
 
   //episode_reset_pub = node_handle.advertise<std_msgs::Bool>("reset", 1);
-  //pose_pub= node_handle.advertise<std_msgs::Float32MultiArray>("state", 1);
   state_pub= node_handle.advertise<std_msgs::Float32MultiArray>("state", 1);
+
   // reset external forces (usually to zero)
   memcpy(f_ext, f_extBase, sizeof(double) * 3 * n);
   f_ext=f_extBase;
@@ -375,7 +346,6 @@ void idleFunction(void)
 // program initialization
 void initSimulation()
 {
-
   if (strcmp(massSpringSystemObjConfigFilename, "__none") != 0)
     massSpringSystemSource = OBJ;
 
@@ -510,7 +480,7 @@ void initSimulation()
   // load initial condition
   if (strcmp(initialPositionFilename, "__none") != 0)
   {
-
+    cout<<"here"<<endl;
     int nf;
     string line;
     string pose="";
@@ -867,7 +837,6 @@ void initConfigurations()
     solver = SYMPLECTICEULER;
   if (strcmp(solverMethod, "centralDifferences") == 0)
     solver = CENTRALDIFFERENCES;
-
   if (solver == UNKNOWN)
   {
     printf("Error: unknown implicit solver specified.\n");
@@ -985,8 +954,9 @@ int main(int argc, char* argv[])
 {
   ros::init(argc, argv, "vega_simulator");
   // parse command line options
-  timeStep=stof(argv[1]);
-  substepsPerTimeStep=stoi(argv[2]);
+  timeStep=0.1;
+  substepsPerTimeStep=5;
+
   char configFilenameC[4096]="beam3_vox_massspring.config" ;
 
   printf("Starting application.\n");

@@ -10,9 +10,9 @@ import numpy as np
 import gym
 from gym import spaces
 #import stable_baselines3
-from stable_baselines3.common.env_checker import check_env
-from stable_baselines3 import PPO, A2C # DQN coming soon
-from stable_baselines3.common.env_util import make_vec_env
+# from stable_baselines3.common.env_checker import check_env
+# from stable_baselines3 import PPO, A2C # DQN coming soon
+# from stable_baselines3.common.env_util import make_vec_env
 
 class vega_env(gym.Env):
 
@@ -110,18 +110,19 @@ def callback(msg):
 if __name__ == '__main__':
 
     rospy.init_node('Controller_node', anonymous = True)
-    nodes= 405 
+    nodes= 405
     env = vega_env(nodes)
     #obs = env.reset()
     #print(obs)
     # If the environment don't follow the interface, an error will be thrown
-    check_env(env, warn=True)
+    # check_env(env, warn=True)
     # wrap it
     #env = make_vec_env(lambda: env, n_envs=1)
     # Train the agent
     #model = A2C('MlpPolicy', env, verbose=1).learn(5000)
     obs = env.reset()
     n_steps = 200
+    r=rospy.Rate(1)
     for step in range(n_steps):
       #action, _ = model.predict(obs, deterministic=True)
       action = np.array([2000,1900])
@@ -136,3 +137,4 @@ if __name__ == '__main__':
     # when a done signal is encountered
         print("Goal reached!", "reward=", reward)
         break
+      r.sleep()

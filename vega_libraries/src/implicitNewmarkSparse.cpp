@@ -141,7 +141,7 @@ void ImplicitNewmarkSparse::UpdateAlphas()
   alpha4 = NewmarkGamma / (NewmarkBeta * timestep);
   alpha5 = 1 - NewmarkGamma/NewmarkBeta;
   alpha6 = (1.0 - NewmarkGamma / (2.0 * NewmarkBeta)) * timestep;
-  // cout<<"timeStep updated. New timestep is:"<<timestep<<endl;
+  cout<<"timeStep updated. New timestep is:"<<timestep<<endl;
 }
 
 // sets the state based on given q, qvel
