@@ -1,0 +1,306 @@
+Starting application.
+Loading scene configuration from beam3_vox_massspring.config.
+Parsing configuration file beam3_vox_massspring.config...
+Warning: unknown option on line 19: deformableObjectCompliance
+Warning: unknown option on line 22: frequencyScaling
+Warning: unknown option on line 37: numInternalForceThreads
+MASSSPRINGSYSTEMOBJCONFIGFILENAME: beam3_vox.massspring
+SOLVER: implicitNewmark
+INITIALPOSITIONFILENAME: __none
+INITIALVELOCITYFILENAME: __none
+G: 9.81
+RENDERINGMESHFILENAME: beam.obj
+FIXEDVERTICESFILENAME: constraints.bou
+TIMESTEP: 0.5
+SUBSTEPSPERTIMESTEP: 1
+DAMPINGMASSCOEF: 1
+DAMPINGSTIFFNESSCOEF: 0.1
+FORCELOADSFILENAME: loads.csv
+VEGACONFIGURATIONSFILENAME: vegaConfigurations.csv
+MOMENTRIGIDSECTIONLOADSFILENAME: moments.csv
+MOMENTRIGIDSECTIONLOADSTIMEDFILENAME: __none
+Loading mass spring system from an obj file...
+Parsing configuration file beam3_vox.massspring...
+MASSSPRINGMESHFILENAME: beam.obj
+SURFACEDENSITY: 24
+TENSILESTIFFNESS: 105000
+SHEARSTIFFNESS: 105000
+BENDSTIFFNESS: 0
+DAMPING: 0
+ADDGRAVITY: 0
+reading the stifness file.
+the count of number of stifness specified in the file is:320
+Number of edges:1920
+MAss spring model generated.
+numFixedVertices:405
+Boundary vertices processed.
+Creating force model...
+Force model: MASSSPRING
+Initializing the integrator, n = 405...
+Solver type: implicitNewmark
+IntergratorBaseSparse constructor called
+timeStep updated. New timestep is:0.5
+NewmarkBeta and NewmarkGamma are:0.25 ,0.5
+reading the gravity file.
+garvity value:0 direction:1
+timeStep updated. New timestep is:0.5
+reading the beam dimensions file.
+substepsPerTimeStep is:1
+The width of the beam is:0.05  and the number of nodes in a row is:5and impulse force is:0
+reading the external moment file.
+applying moment of :0 between nodes :196 and 200
+applying moment of :0 between nodes :396 and 400
+reading the external force file.
+the number of nodes on which f_ext is applied is:0
+node initialized. Subscribed to force
+timeStep is:0.1000000015
+timeStep updated. New timestep is:0.1000000015
+force updated. New moment is: 0 and 0.07999999821
+force updated. New moment is: 0 and 0.1199999973
+force updated. New moment is: 0 and 0.1599999964
+force updated. New moment is: 0 and 0.200000003
+force updated. New moment is: 0 and 0.2399999946
+force updated. New moment is: 0 and 0.2800000012
+force updated. New moment is: 0 and 0.3199999928
+force updated. New moment is: 0 and 0.3600000143
+force updated. New moment is: 0 and 0.400000006
+force updated. New moment is: 0 and 0.4399999976
+force updated. New moment is: 0 and 0.4799999893
+force updated. New moment is: 0 and 0.5199999809
+force updated. New moment is: 0 and 0.5600000024
+force updated. New moment is: 0 and 0.6000000238
+force updated. New moment is: 0 and 0.6399999857
+force updated. New moment is: 0 and 0.6800000072
+force updated. New moment is: 0 and 0.7200000286
+force updated. New moment is: 0 and 0.7599999905
+force updated. New moment is: 0 and 0.8000000119
+force updated. New moment is: 0 and 0.8399999738
+force updated. New moment is: 0 and 0.8799999952
+force updated. New moment is: 0 and 0.9200000167
+force updated. New moment is: 0 and 0.9599999785
+force updated. New moment is: 0 and 1
+force updated. New moment is: 0 and 1.039999962
+force updated. New moment is: 0 and 1.080000043
+force updated. New moment is: 0 and 1.120000005
+force updated. New moment is: 0 and 1.159999967
+force updated. New moment is: 0 and 1.200000048
+force updated. New moment is: 0 and 1.24000001
+force updated. New moment is: 0 and 1.279999971
+force updated. New moment is: 0 and 1.320000052
+force updated. New moment is: 0 and 1.360000014
+force updated. New moment is: 0 and 1.399999976
+force updated. New moment is: 0 and 1.440000057
+force updated. New moment is: 0 and 1.480000019
+force updated. New moment is: 0 and 1.519999981
+force updated. New moment is: 0 and 1.559999943
+force updated. New moment is: 0 and 1.600000024
+force updated. New moment is: 0 and 1.639999986
+force updated. New moment is: 0 and 1.679999948
+force updated. New moment is: 0 and 1.720000029
+force updated. New moment is: 0 and 1.75999999
+force updated. New moment is: 0 and 1.799999952
+force updated. New moment is: 0 and 1.840000033
+force updated. New moment is: 0 and 1.879999995
+force updated. New moment is: 0 and 1.919999957
+force updated. New moment is: 0 and 1.960000038
+force updated. New moment is: 0 and 2
+force updated. New moment is: 0 and 2.039999962
+force updated. New moment is: 0 and 2.079999924
+force updated. New moment is: 0 and 2.119999886
+force updated. New moment is: 0 and 2.160000086
+force updated. New moment is: 0 and 2.200000048
+force updated. New moment is: 0 and 2.24000001
+force updated. New moment is: 0 and 2.279999971
+force updated. New moment is: 0 and 2.319999933
+force updated. New moment is: 0 and 2.359999895
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095
+force updated. New moment is: 0 and 2.400000095

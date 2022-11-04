@@ -1,0 +1,43 @@
+[rospy.client][INFO] 2022-10-14 16:44:46,756: init_node, name[/Controller_node_117974_1665746086737], pid[117974]
+[xmlrpc][INFO] 2022-10-14 16:44:46,756: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2022-10-14 16:44:46,756: Started XML-RPC server [http://192.168.1.131:40469/]
+[rospy.impl.masterslave][INFO] 2022-10-14 16:44:46,756: _ready: http://192.168.1.131:40469/
+[rospy.init][INFO] 2022-10-14 16:44:46,756: ROS Slave URI: [http://192.168.1.131:40469/]
+[rospy.registration][INFO] 2022-10-14 16:44:46,757: Registering with master node http://192.168.1.131:11311
+[xmlrpc][INFO] 2022-10-14 16:44:46,757: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2022-10-14 16:44:46,857: registered with master
+[rospy.rosout][INFO] 2022-10-14 16:44:46,857: initializing /rosout core topic
+[rospy.rosout][INFO] 2022-10-14 16:44:46,864: connected to core topic /rosout
+[rospy.simtime][INFO] 2022-10-14 16:44:46,865: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2022-10-14 16:44:46,890: topic[/actual_system/state] adding connection to [http://192.168.1.131:39155/], count 0
+[rospy.internal][INFO] 2022-10-14 16:44:46,891: topic[/steps_compiled] adding connection to [http://192.168.1.131:38463/], count 0
+[rospy.internal][INFO] 2022-10-14 16:44:47,051: topic[/actual_system/force] adding connection to [/actual_system/simluator], count 0
+[rospy.internal][INFO] 2022-10-14 16:44:47,147: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2022-10-14 16:44:47,149: topic[/actual_system/force] adding connection to [/matlab_global_node_88815], count 1
+[rospy.internal][INFO] 2022-10-14 16:44:47,152: topic[/virtual_system/force] adding connection to [/virtual_system/simluator], count 0
+[rospy.internal][INFO] 2022-10-14 16:44:47,155: topic[/step_response1/force] adding connection to [/step_response1/simluator], count 0
+[rospy.internal][INFO] 2022-10-14 16:44:47,157: topic[/step_response0/force] adding connection to [/step_response0/simluator], count 0
+[rospy.internal][INFO] 2022-10-14 16:44:47,158: topic[/step_response2/force] adding connection to [/step_response2/simluator], count 0
+[rosout][INFO] 2022-10-14 16:44:47,888: controller node intialized and has Subscribed to compiled step and publishing to force
+[rosout][INFO] 2022-10-14 16:44:47,891: publishing first command to start the system
+[rosout][INFO] 2022-10-14 16:46:27,666: system has been simulted for the derired time shutting down now
+[rospy.core][INFO] 2022-10-14 16:46:27,670: signal_shutdown [system has been simulted for the derired time shutting down now]
+[rospy.internal][INFO] 2022-10-14 16:46:27,677: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2022-10-14 16:46:27,677: topic[/actual_system/force] removing connection to /actual_system/simluator
+[rospy.internal][INFO] 2022-10-14 16:46:27,678: topic[/actual_system/force] removing connection to /matlab_global_node_88815
+[rospy.internal][INFO] 2022-10-14 16:46:27,678: topic[/virtual_system/force] removing connection to /virtual_system/simluator
+[rospy.internal][INFO] 2022-10-14 16:46:27,679: topic[/step_response0/force] removing connection to /step_response0/simluator
+[rospy.internal][INFO] 2022-10-14 16:46:27,687: topic[/step_response1/force] removing connection to /step_response1/simluator
+[rospy.internal][INFO] 2022-10-14 16:46:27,688: topic[/step_response2/force] removing connection to /step_response2/simluator
+[rospy.internal][INFO] 2022-10-14 16:46:27,688: topic[/steps_compiled] removing connection to http://192.168.1.131:38463/
+[rospy.internal][INFO] 2022-10-14 16:46:27,689: topic[/steps_compiled] removing connection to http://192.168.1.131:38463/
+[rospy.topics][ERROR] 2022-10-14 16:46:27,689: Traceback (most recent call last):
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_base.py", line 858, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.internal][INFO] 2022-10-14 16:46:27,690: topic[/actual_system/state] removing connection to http://192.168.1.131:39155/
+[rospy.impl.masterslave][INFO] 2022-10-14 16:46:27,690: system has been simulted for the derired time shutting down now
+[rospy.core][INFO] 2022-10-14 16:46:27,994: signal_shutdown [atexit]

@@ -1,0 +1,59 @@
+[rosmaster.main][INFO] 2022-10-09 19:59:30,372: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2022-10-09 19:59:30,372: Starting ROS Master Node
+[xmlrpc][INFO] 2022-10-09 19:59:30,372: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2022-10-09 19:59:30,373: Started XML-RPC server [http://192.168.1.131:11311/]
+[xmlrpc][INFO] 2022-10-09 19:59:30,373: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2022-10-09 19:59:30,373: Master initialized: port[11311], uri[http://192.168.1.131:11311/]
+[rosmaster.master][INFO] 2022-10-09 19:59:30,412: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2022-10-09 19:59:30,413: +PARAM [/roslaunch/uris/host_192_168_1_131__44641] by /roslaunch
+[rosmaster.master][INFO] 2022-10-09 19:59:30,468: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2022-10-09 19:59:30,469: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2022-10-09 19:59:30,486: +SERVICE [/rosout/get_loggers] /rosout http://192.168.1.131:35423/
+[rosmaster.master][INFO] 2022-10-09 19:59:30,487: +SERVICE [/rosout/set_logger_level] /rosout http://192.168.1.131:35423/
+[rosmaster.master][INFO] 2022-10-09 19:59:30,488: +PUB [/rosout_agg] /rosout http://192.168.1.131:35423/
+[rosmaster.master][INFO] 2022-10-09 19:59:30,491: +SUB [/rosout] /rosout http://192.168.1.131:35423/
+[rosmaster.master][INFO] 2022-10-09 19:59:30,513: +PUB [/rosout] /actual_system/simluator http://192.168.1.131:41975/
+[rosmaster.master][INFO] 2022-10-09 19:59:30,514: +SERVICE [/actual_system/simluator/get_loggers] /actual_system/simluator http://192.168.1.131:41975/
+[rosmaster.master][INFO] 2022-10-09 19:59:30,514: +SERVICE [/actual_system/simluator/set_logger_level] /actual_system/simluator http://192.168.1.131:41975/
+[rosmaster.master][INFO] 2022-10-09 19:59:30,517: +SUB [/actual_system/force] /actual_system/simluator http://192.168.1.131:41975/
+[rosmaster.master][INFO] 2022-10-09 19:59:30,572: publisherUpdate[/rosout] -> http://192.168.1.131:35423/ ['http://192.168.1.131:41975/']
+[rosmaster.master][INFO] 2022-10-09 19:59:30,574: publisherUpdate[/rosout] -> http://192.168.1.131:35423/ ['http://192.168.1.131:41975/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-09 19:59:44,069: +PUB [/rosout] /rqt_gui_py_node_29658 http://192.168.1.131:38501/
+[rosmaster.master][INFO] 2022-10-09 19:59:44,070: +SERVICE [/rqt_gui_py_node_29658/get_loggers] /rqt_gui_py_node_29658 http://192.168.1.131:38501/
+[rosmaster.master][INFO] 2022-10-09 19:59:44,071: +SERVICE [/rqt_gui_py_node_29658/set_logger_level] /rqt_gui_py_node_29658 http://192.168.1.131:38501/
+[rosmaster.master][INFO] 2022-10-09 19:59:44,089: publisherUpdate[/rosout] -> http://192.168.1.131:35423/ ['http://192.168.1.131:41975/', 'http://192.168.1.131:38501/']
+[rosmaster.master][INFO] 2022-10-09 19:59:44,090: publisherUpdate[/rosout] -> http://192.168.1.131:35423/ ['http://192.168.1.131:41975/', 'http://192.168.1.131:38501/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-09 19:59:44,098: +SUB [/statistics] /rqt_gui_py_node_29658 http://192.168.1.131:38501/
+[rosmaster.master][INFO] 2022-10-09 20:00:49,012: +SERVICE [/rostopic_29950_1665325848887/get_loggers] /rostopic_29950_1665325848887 http://192.168.1.131:43261/
+[rosmaster.master][INFO] 2022-10-09 20:00:49,013: +SERVICE [/rostopic_29950_1665325848887/set_logger_level] /rostopic_29950_1665325848887 http://192.168.1.131:43261/
+[rosmaster.master][INFO] 2022-10-09 20:00:49,014: +PUB [/actual_system/force] /rostopic_29950_1665325848887 http://192.168.1.131:43261/
+[rosmaster.master][INFO] 2022-10-09 20:00:49,064: publisherUpdate[/actual_system/force] -> http://192.168.1.131:41975/ ['http://192.168.1.131:43261/']
+[rosmaster.master][INFO] 2022-10-09 20:00:49,065: publisherUpdate[/actual_system/force] -> http://192.168.1.131:41975/ ['http://192.168.1.131:43261/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-09 20:00:53,186: -PUB [/actual_system/force] /rostopic_29950_1665325848887 http://192.168.1.131:43261/
+[rosmaster.master][INFO] 2022-10-09 20:00:53,186: -SERVICE [/rostopic_29950_1665325848887/get_loggers] /rostopic_29950_1665325848887 rosrpc://192.168.1.131:44515
+[rosmaster.master][INFO] 2022-10-09 20:00:53,186: -SERVICE [/rostopic_29950_1665325848887/set_logger_level] /rostopic_29950_1665325848887 rosrpc://192.168.1.131:44515
+[rosmaster.master][INFO] 2022-10-09 20:00:53,270: publisherUpdate[/actual_system/force] -> http://192.168.1.131:41975/ []
+[rosmaster.master][INFO] 2022-10-09 20:00:53,270: publisherUpdate[/actual_system/force] -> http://192.168.1.131:41975/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-09 20:01:09,066: +SERVICE [/rostopic_30036_1665325868942/get_loggers] /rostopic_30036_1665325868942 http://192.168.1.131:46561/
+[rosmaster.master][INFO] 2022-10-09 20:01:09,067: +SERVICE [/rostopic_30036_1665325868942/set_logger_level] /rostopic_30036_1665325868942 http://192.168.1.131:46561/
+[rosmaster.master][INFO] 2022-10-09 20:01:09,068: +PUB [/actual_system/force] /rostopic_30036_1665325868942 http://192.168.1.131:46561/
+[rosmaster.master][INFO] 2022-10-09 20:01:09,088: publisherUpdate[/actual_system/force] -> http://192.168.1.131:41975/ ['http://192.168.1.131:46561/']
+[rosmaster.master][INFO] 2022-10-09 20:01:09,089: publisherUpdate[/actual_system/force] -> http://192.168.1.131:41975/ ['http://192.168.1.131:46561/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-09 20:01:12,650: -PUB [/actual_system/force] /rostopic_30036_1665325868942 http://192.168.1.131:46561/
+[rosmaster.master][INFO] 2022-10-09 20:01:12,650: -SERVICE [/rostopic_30036_1665325868942/get_loggers] /rostopic_30036_1665325868942 rosrpc://192.168.1.131:38487
+[rosmaster.master][INFO] 2022-10-09 20:01:12,650: -SERVICE [/rostopic_30036_1665325868942/set_logger_level] /rostopic_30036_1665325868942 rosrpc://192.168.1.131:38487
+[rosmaster.master][INFO] 2022-10-09 20:01:12,693: publisherUpdate[/actual_system/force] -> http://192.168.1.131:41975/ []
+[rosmaster.master][INFO] 2022-10-09 20:01:12,693: publisherUpdate[/actual_system/force] -> http://192.168.1.131:41975/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-09 20:07:11,400: -PUB [/rosout] /actual_system/simluator http://192.168.1.131:41975/
+[rosmaster.master][INFO] 2022-10-09 20:07:11,401: -SUB [/actual_system/force] /actual_system/simluator http://192.168.1.131:41975/
+[rosmaster.master][INFO] 2022-10-09 20:07:11,401: -SERVICE [/actual_system/simluator/get_loggers] /actual_system/simluator rosrpc://192.168.1.131:36931
+[rosmaster.master][INFO] 2022-10-09 20:07:11,401: -SERVICE [/actual_system/simluator/set_logger_level] /actual_system/simluator rosrpc://192.168.1.131:36931
+[rosmaster.master][INFO] 2022-10-09 20:07:11,409: publisherUpdate[/rosout] -> http://192.168.1.131:35423/ ['http://192.168.1.131:38501/']
+[rosmaster.master][INFO] 2022-10-09 20:07:11,409: publisherUpdate[/rosout] -> http://192.168.1.131:35423/ ['http://192.168.1.131:38501/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-09 20:07:11,710: -PUB [/rosout_agg] /rosout http://192.168.1.131:35423/
+[rosmaster.master][INFO] 2022-10-09 20:07:11,710: -SUB [/rosout] /rosout http://192.168.1.131:35423/
+[rosmaster.master][INFO] 2022-10-09 20:07:11,711: -SERVICE [/rosout/get_loggers] /rosout rosrpc://192.168.1.131:58321
+[rosmaster.master][INFO] 2022-10-09 20:07:11,711: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://192.168.1.131:58321
+[rosmaster.main][INFO] 2022-10-09 20:07:11,809: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2022-10-09 20:07:11,809: stopping master...
+[rospy.core][INFO] 2022-10-09 20:07:11,809: signal_shutdown [atexit]

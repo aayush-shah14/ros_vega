@@ -1,0 +1,119 @@
+[rosmaster.main][INFO] 2022-10-11 15:51:17,807: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2022-10-11 15:51:17,808: Starting ROS Master Node
+[xmlrpc][INFO] 2022-10-11 15:51:17,808: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2022-10-11 15:51:17,809: Started XML-RPC server [http://192.168.1.131:11311/]
+[xmlrpc][INFO] 2022-10-11 15:51:17,809: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2022-10-11 15:51:17,809: Master initialized: port[11311], uri[http://192.168.1.131:11311/]
+[rosmaster.master][INFO] 2022-10-11 15:51:17,834: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2022-10-11 15:51:17,835: +PARAM [/roslaunch/uris/host_192_168_1_131__39587] by /roslaunch
+[rosmaster.master][INFO] 2022-10-11 15:51:17,901: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2022-10-11 15:51:17,901: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2022-10-11 15:51:17,909: +SERVICE [/rosout/get_loggers] /rosout http://192.168.1.131:39355/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,909: +SERVICE [/rosout/set_logger_level] /rosout http://192.168.1.131:39355/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,910: +PUB [/rosout_agg] /rosout http://192.168.1.131:39355/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,911: +SUB [/rosout] /rosout http://192.168.1.131:39355/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,923: +PUB [/rosout] /actual_system/simluator http://192.168.1.131:42331/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,923: +SERVICE [/actual_system/simluator/get_loggers] /actual_system/simluator http://192.168.1.131:42331/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,924: +SERVICE [/actual_system/simluator/set_logger_level] /actual_system/simluator http://192.168.1.131:42331/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,926: +SUB [/actual_system/force] /actual_system/simluator http://192.168.1.131:42331/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,926: +PUB [/actual_system/tip_pose] /actual_system/simluator http://192.168.1.131:42331/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,929: +PUB [/rosout] /virtual_system/simluator http://192.168.1.131:41573/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,929: +SERVICE [/virtual_system/simluator/get_loggers] /virtual_system/simluator http://192.168.1.131:41573/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,930: +SERVICE [/virtual_system/simluator/set_logger_level] /virtual_system/simluator http://192.168.1.131:41573/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,931: +SUB [/virtual_system/force] /virtual_system/simluator http://192.168.1.131:41573/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,932: +PUB [/virtual_system/tip_pose] /virtual_system/simluator http://192.168.1.131:41573/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,933: +PUB [/rosout] /step_response0/simluator http://192.168.1.131:33215/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,934: +SERVICE [/step_response0/simluator/get_loggers] /step_response0/simluator http://192.168.1.131:33215/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,934: +SERVICE [/step_response0/simluator/set_logger_level] /step_response0/simluator http://192.168.1.131:33215/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,936: +SUB [/step_response0/force] /step_response0/simluator http://192.168.1.131:33215/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,937: +PUB [/step_response0/tip_pose] /step_response0/simluator http://192.168.1.131:33215/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,940: +PUB [/rosout] /step_response1/simluator http://192.168.1.131:37531/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,940: +SERVICE [/step_response1/simluator/get_loggers] /step_response1/simluator http://192.168.1.131:37531/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,940: +SERVICE [/step_response1/simluator/set_logger_level] /step_response1/simluator http://192.168.1.131:37531/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,942: +SUB [/step_response1/force] /step_response1/simluator http://192.168.1.131:37531/
+[rosmaster.master][INFO] 2022-10-11 15:51:17,942: +PUB [/step_response1/tip_pose] /step_response1/simluator http://192.168.1.131:37531/
+[rosmaster.master][INFO] 2022-10-11 15:51:18,008: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/']
+[rosmaster.master][INFO] 2022-10-11 15:51:18,015: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/']: sec=0.01, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 15:51:18,015: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/']
+[rosmaster.master][INFO] 2022-10-11 15:51:18,016: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 15:51:18,016: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/']
+[rosmaster.master][INFO] 2022-10-11 15:51:18,017: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 15:51:18,017: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/']
+[rosmaster.master][INFO] 2022-10-11 15:51:18,018: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 15:51:22,162: -PUB [/rosout] /matlab_global_node_48081 http://192.168.1.131:45859/
+[rosmaster.master][INFO] 2022-10-11 15:51:22,162: -PUB [/tf] /matlab_global_node_48081 http://192.168.1.131:45859/
+[rosmaster.master][INFO] 2022-10-11 15:51:22,162: -SERVICE [/matlab_global_node_48081/get_loggers] /matlab_global_node_48081 rosrpc://192.168.1.131:51231
+[rosmaster.master][INFO] 2022-10-11 15:51:22,163: -SERVICE [/matlab_global_node_48081/set_logger_level] /matlab_global_node_48081 rosrpc://192.168.1.131:51231
+[rosmaster.master][INFO] 2022-10-11 15:51:22,483: +PUB [/rosout] /matlab_global_node_18759 http://192.168.1.131:39001/
+[rosmaster.master][INFO] 2022-10-11 15:51:22,484: +SERVICE [/matlab_global_node_18759/get_loggers] /matlab_global_node_18759 http://192.168.1.131:39001/
+[rosmaster.master][INFO] 2022-10-11 15:51:22,485: +SERVICE [/matlab_global_node_18759/set_logger_level] /matlab_global_node_18759 http://192.168.1.131:39001/
+[rosmaster.master][INFO] 2022-10-11 15:51:22,486: +PUB [/tf] /matlab_global_node_18759 http://192.168.1.131:39001/
+[rosmaster.master][INFO] 2022-10-11 15:51:22,516: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:39001/']
+[rosmaster.master][INFO] 2022-10-11 15:51:22,518: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:39001/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 15:51:22,544: +SUB [/actual_system/tip_pose] /matlab_global_node_18759 http://192.168.1.131:39001/
+[rosmaster.master][INFO] 2022-10-11 15:51:27,812: +PUB [/rosout] /Controller_node_20878_1665483687687 http://192.168.1.131:35185/
+[rosmaster.master][INFO] 2022-10-11 15:51:27,817: +SERVICE [/Controller_node_20878_1665483687687/get_loggers] /Controller_node_20878_1665483687687 http://192.168.1.131:35185/
+[rosmaster.master][INFO] 2022-10-11 15:51:27,819: +SERVICE [/Controller_node_20878_1665483687687/set_logger_level] /Controller_node_20878_1665483687687 http://192.168.1.131:35185/
+[rosmaster.master][INFO] 2022-10-11 15:51:27,821: +PUB [/actual_system/force] /Controller_node_20878_1665483687687 http://192.168.1.131:35185/
+[rosmaster.master][INFO] 2022-10-11 15:51:27,827: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:39001/', 'http://192.168.1.131:35185/']
+[rosmaster.master][INFO] 2022-10-11 15:51:27,828: publisherUpdate[/actual_system/force] -> http://192.168.1.131:42331/ ['http://192.168.1.131:35185/']
+[rosmaster.master][INFO] 2022-10-11 15:51:27,829: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:39001/', 'http://192.168.1.131:35185/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 15:51:27,831: publisherUpdate[/actual_system/force] -> http://192.168.1.131:42331/ ['http://192.168.1.131:35185/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 15:52:02,730: -PUB [/rosout] /Controller_node_20878_1665483687687 http://192.168.1.131:35185/
+[rosmaster.master][INFO] 2022-10-11 15:52:02,730: -PUB [/actual_system/force] /Controller_node_20878_1665483687687 http://192.168.1.131:35185/
+[rosmaster.master][INFO] 2022-10-11 15:52:02,730: -SERVICE [/Controller_node_20878_1665483687687/get_loggers] /Controller_node_20878_1665483687687 rosrpc://192.168.1.131:42681
+[rosmaster.master][INFO] 2022-10-11 15:52:02,730: -SERVICE [/Controller_node_20878_1665483687687/set_logger_level] /Controller_node_20878_1665483687687 rosrpc://192.168.1.131:42681
+[rosmaster.master][INFO] 2022-10-11 15:52:02,782: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:39001/']
+[rosmaster.master][INFO] 2022-10-11 15:52:02,782: publisherUpdate[/actual_system/force] -> http://192.168.1.131:42331/ []
+[rosmaster.master][INFO] 2022-10-11 15:52:02,783: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:39001/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 15:52:02,784: publisherUpdate[/actual_system/force] -> http://192.168.1.131:42331/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 16:49:24,275: -SUB [/actual_system/tip_pose] /matlab_global_node_18759 http://192.168.1.131:39001/
+[rosmaster.master][INFO] 2022-10-11 16:49:24,394: -PUB [/rosout] /matlab_global_node_18759 http://192.168.1.131:39001/
+[rosmaster.master][INFO] 2022-10-11 16:49:24,395: -PUB [/tf] /matlab_global_node_18759 http://192.168.1.131:39001/
+[rosmaster.master][INFO] 2022-10-11 16:49:24,395: -SERVICE [/matlab_global_node_18759/get_loggers] /matlab_global_node_18759 rosrpc://192.168.1.131:41667
+[rosmaster.master][INFO] 2022-10-11 16:49:24,395: -SERVICE [/matlab_global_node_18759/set_logger_level] /matlab_global_node_18759 rosrpc://192.168.1.131:41667
+[rosmaster.master][INFO] 2022-10-11 16:49:24,446: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/']
+[rosmaster.master][INFO] 2022-10-11 16:49:24,447: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 16:49:24,629: +PUB [/rosout] /matlab_global_node_70158 http://192.168.1.131:44509/
+[rosmaster.master][INFO] 2022-10-11 16:49:24,630: +SERVICE [/matlab_global_node_70158/get_loggers] /matlab_global_node_70158 http://192.168.1.131:44509/
+[rosmaster.master][INFO] 2022-10-11 16:49:24,630: +SERVICE [/matlab_global_node_70158/set_logger_level] /matlab_global_node_70158 http://192.168.1.131:44509/
+[rosmaster.master][INFO] 2022-10-11 16:49:24,631: +PUB [/tf] /matlab_global_node_70158 http://192.168.1.131:44509/
+[rosmaster.master][INFO] 2022-10-11 16:49:24,646: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:44509/']
+[rosmaster.master][INFO] 2022-10-11 16:49:24,647: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:42331/', 'http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:44509/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 16:49:24,652: +SUB [/actual_system/tip_pose] /matlab_global_node_70158 http://192.168.1.131:44509/
+[rosmaster.master][INFO] 2022-10-11 17:23:43,884: -SUB [/actual_system/tip_pose] /matlab_global_node_70158 http://192.168.1.131:44509/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,689: -PUB [/rosout] /actual_system/simluator http://192.168.1.131:42331/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,689: -PUB [/actual_system/tip_pose] /actual_system/simluator http://192.168.1.131:42331/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,689: -SUB [/actual_system/force] /actual_system/simluator http://192.168.1.131:42331/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,690: -SERVICE [/actual_system/simluator/get_loggers] /actual_system/simluator rosrpc://192.168.1.131:47037
+[rosmaster.master][INFO] 2022-10-11 17:24:18,690: -SERVICE [/actual_system/simluator/set_logger_level] /actual_system/simluator rosrpc://192.168.1.131:47037
+[rosmaster.master][INFO] 2022-10-11 17:24:18,754: -PUB [/rosout] /virtual_system/simluator http://192.168.1.131:41573/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,758: -PUB [/virtual_system/tip_pose] /virtual_system/simluator http://192.168.1.131:41573/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,758: -SUB [/virtual_system/force] /virtual_system/simluator http://192.168.1.131:41573/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,758: -SERVICE [/virtual_system/simluator/get_loggers] /virtual_system/simluator rosrpc://192.168.1.131:43003
+[rosmaster.master][INFO] 2022-10-11 17:24:18,759: -SERVICE [/virtual_system/simluator/set_logger_level] /virtual_system/simluator rosrpc://192.168.1.131:43003
+[rosmaster.master][INFO] 2022-10-11 17:24:18,766: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:44509/']
+[rosmaster.master][INFO] 2022-10-11 17:24:18,767: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:41573/', 'http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:44509/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:18,767: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:44509/']
+[rosmaster.master][INFO] 2022-10-11 17:24:18,767: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:33215/', 'http://192.168.1.131:37531/', 'http://192.168.1.131:44509/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:18,789: -PUB [/rosout] /step_response1/simluator http://192.168.1.131:37531/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,789: -PUB [/rosout] /step_response0/simluator http://192.168.1.131:33215/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,789: -PUB [/step_response1/tip_pose] /step_response1/simluator http://192.168.1.131:37531/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,790: -PUB [/step_response0/tip_pose] /step_response0/simluator http://192.168.1.131:33215/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,790: -SUB [/step_response1/force] /step_response1/simluator http://192.168.1.131:37531/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,790: -SUB [/step_response0/force] /step_response0/simluator http://192.168.1.131:33215/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,790: -SERVICE [/step_response1/simluator/get_loggers] /step_response1/simluator rosrpc://192.168.1.131:36219
+[rosmaster.master][INFO] 2022-10-11 17:24:18,791: -SERVICE [/step_response0/simluator/get_loggers] /step_response0/simluator rosrpc://192.168.1.131:60349
+[rosmaster.master][INFO] 2022-10-11 17:24:18,791: -SERVICE [/step_response1/simluator/set_logger_level] /step_response1/simluator rosrpc://192.168.1.131:36219
+[rosmaster.master][INFO] 2022-10-11 17:24:18,791: -SERVICE [/step_response0/simluator/set_logger_level] /step_response0/simluator rosrpc://192.168.1.131:60349
+[rosmaster.master][INFO] 2022-10-11 17:24:18,867: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:33215/', 'http://192.168.1.131:44509/']
+[rosmaster.master][INFO] 2022-10-11 17:24:18,868: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:33215/', 'http://192.168.1.131:44509/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:18,869: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:44509/']
+[rosmaster.master][INFO] 2022-10-11 17:24:18,870: publisherUpdate[/rosout] -> http://192.168.1.131:39355/ ['http://192.168.1.131:44509/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:18,970: -PUB [/rosout_agg] /rosout http://192.168.1.131:39355/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,970: -SUB [/rosout] /rosout http://192.168.1.131:39355/
+[rosmaster.master][INFO] 2022-10-11 17:24:18,971: -SERVICE [/rosout/get_loggers] /rosout rosrpc://192.168.1.131:54155
+[rosmaster.master][INFO] 2022-10-11 17:24:18,971: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://192.168.1.131:54155
+[rosmaster.main][INFO] 2022-10-11 17:24:19,025: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2022-10-11 17:24:19,025: stopping master...
+[rospy.core][INFO] 2022-10-11 17:24:19,025: signal_shutdown [atexit]

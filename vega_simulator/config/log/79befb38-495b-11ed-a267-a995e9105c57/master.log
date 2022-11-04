@@ -1,0 +1,63 @@
+[rosmaster.main][INFO] 2022-10-11 17:24:35,499: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2022-10-11 17:24:35,499: Starting ROS Master Node
+[xmlrpc][INFO] 2022-10-11 17:24:35,499: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2022-10-11 17:24:35,500: Started XML-RPC server [http://192.168.1.131:11311/]
+[xmlrpc][INFO] 2022-10-11 17:24:35,500: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2022-10-11 17:24:35,500: Master initialized: port[11311], uri[http://192.168.1.131:11311/]
+[rosmaster.master][INFO] 2022-10-11 17:24:35,538: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2022-10-11 17:24:35,539: +PARAM [/roslaunch/uris/host_192_168_1_131__35613] by /roslaunch
+[rosmaster.master][INFO] 2022-10-11 17:24:35,562: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2022-10-11 17:24:35,562: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2022-10-11 17:24:35,570: +SERVICE [/rosout/get_loggers] /rosout http://192.168.1.131:41867/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,571: +SERVICE [/rosout/set_logger_level] /rosout http://192.168.1.131:41867/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,572: +PUB [/rosout_agg] /rosout http://192.168.1.131:41867/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,573: +SUB [/rosout] /rosout http://192.168.1.131:41867/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,587: +PUB [/rosout] /actual_system/simluator http://192.168.1.131:42459/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,587: +SERVICE [/actual_system/simluator/get_loggers] /actual_system/simluator http://192.168.1.131:42459/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,588: +SERVICE [/actual_system/simluator/set_logger_level] /actual_system/simluator http://192.168.1.131:42459/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,589: +SUB [/actual_system/force] /actual_system/simluator http://192.168.1.131:42459/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,589: +PUB [/actual_system/tip_pose] /actual_system/simluator http://192.168.1.131:42459/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,591: +PUB [/rosout] /virtual_system/simluator http://192.168.1.131:36551/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,592: +SERVICE [/virtual_system/simluator/get_loggers] /virtual_system/simluator http://192.168.1.131:36551/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,592: +SERVICE [/virtual_system/simluator/set_logger_level] /virtual_system/simluator http://192.168.1.131:36551/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,593: +PUB [/rosout] /step_response0/simluator http://192.168.1.131:42897/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,594: +SERVICE [/step_response0/simluator/get_loggers] /step_response0/simluator http://192.168.1.131:42897/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,594: +SUB [/virtual_system/force] /virtual_system/simluator http://192.168.1.131:36551/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,594: +SERVICE [/step_response0/simluator/set_logger_level] /step_response0/simluator http://192.168.1.131:42897/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,594: +PUB [/virtual_system/tip_pose] /virtual_system/simluator http://192.168.1.131:36551/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,596: +SUB [/step_response0/force] /step_response0/simluator http://192.168.1.131:42897/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,596: +PUB [/step_response0/tip_pose] /step_response0/simluator http://192.168.1.131:42897/
+[rosmaster.master][INFO] 2022-10-11 17:24:35,599: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/']
+[rosmaster.master][INFO] 2022-10-11 17:24:35,601: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:35,601: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/', 'http://192.168.1.131:36551/']
+[rosmaster.master][INFO] 2022-10-11 17:24:35,602: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/', 'http://192.168.1.131:36551/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:35,602: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/', 'http://192.168.1.131:36551/', 'http://192.168.1.131:42897/']
+[rosmaster.master][INFO] 2022-10-11 17:24:35,602: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/', 'http://192.168.1.131:36551/', 'http://192.168.1.131:42897/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:40,113: -PUB [/rosout] /virtual_system/simluator http://192.168.1.131:36551/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,113: -PUB [/rosout] /step_response0/simluator http://192.168.1.131:42897/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,114: -PUB [/rosout] /actual_system/simluator http://192.168.1.131:42459/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,114: -PUB [/virtual_system/tip_pose] /virtual_system/simluator http://192.168.1.131:36551/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,114: -PUB [/step_response0/tip_pose] /step_response0/simluator http://192.168.1.131:42897/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,114: -PUB [/actual_system/tip_pose] /actual_system/simluator http://192.168.1.131:42459/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,115: -SUB [/virtual_system/force] /virtual_system/simluator http://192.168.1.131:36551/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,115: -SUB [/step_response0/force] /step_response0/simluator http://192.168.1.131:42897/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,115: -SUB [/actual_system/force] /actual_system/simluator http://192.168.1.131:42459/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,116: -SERVICE [/virtual_system/simluator/get_loggers] /virtual_system/simluator rosrpc://192.168.1.131:48099
+[rosmaster.master][INFO] 2022-10-11 17:24:40,116: -SERVICE [/step_response0/simluator/get_loggers] /step_response0/simluator rosrpc://192.168.1.131:54329
+[rosmaster.master][INFO] 2022-10-11 17:24:40,116: -SERVICE [/actual_system/simluator/get_loggers] /actual_system/simluator rosrpc://192.168.1.131:44005
+[rosmaster.master][INFO] 2022-10-11 17:24:40,117: -SERVICE [/virtual_system/simluator/set_logger_level] /virtual_system/simluator rosrpc://192.168.1.131:48099
+[rosmaster.master][INFO] 2022-10-11 17:24:40,117: -SERVICE [/step_response0/simluator/set_logger_level] /step_response0/simluator rosrpc://192.168.1.131:54329
+[rosmaster.master][INFO] 2022-10-11 17:24:40,117: -SERVICE [/actual_system/simluator/set_logger_level] /actual_system/simluator rosrpc://192.168.1.131:44005
+[rosmaster.master][INFO] 2022-10-11 17:24:40,208: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/', 'http://192.168.1.131:42897/']
+[rosmaster.master][INFO] 2022-10-11 17:24:40,209: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/', 'http://192.168.1.131:42897/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:40,210: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/']
+[rosmaster.master][INFO] 2022-10-11 17:24:40,211: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ ['http://192.168.1.131:42459/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:40,211: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ []
+[rosmaster.master][INFO] 2022-10-11 17:24:40,212: publisherUpdate[/rosout] -> http://192.168.1.131:41867/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-10-11 17:24:40,312: -PUB [/rosout_agg] /rosout http://192.168.1.131:41867/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,312: -SUB [/rosout] /rosout http://192.168.1.131:41867/
+[rosmaster.master][INFO] 2022-10-11 17:24:40,313: -SERVICE [/rosout/get_loggers] /rosout rosrpc://192.168.1.131:37749
+[rosmaster.master][INFO] 2022-10-11 17:24:40,313: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://192.168.1.131:37749
+[rosmaster.main][INFO] 2022-10-11 17:24:40,344: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2022-10-11 17:24:40,344: stopping master...
+[rospy.core][INFO] 2022-10-11 17:24:40,344: signal_shutdown [atexit]

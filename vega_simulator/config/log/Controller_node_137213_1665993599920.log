@@ -1,0 +1,28 @@
+[rospy.client][INFO] 2022-10-17 13:29:59,939: init_node, name[/Controller_node_137213_1665993599920], pid[137213]
+[xmlrpc][INFO] 2022-10-17 13:29:59,939: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2022-10-17 13:29:59,939: Started XML-RPC server [http://192.168.1.131:42929/]
+[rospy.init][INFO] 2022-10-17 13:29:59,939: ROS Slave URI: [http://192.168.1.131:42929/]
+[rospy.impl.masterslave][INFO] 2022-10-17 13:29:59,939: _ready: http://192.168.1.131:42929/
+[rospy.registration][INFO] 2022-10-17 13:29:59,940: Registering with master node http://192.168.1.131:11311
+[xmlrpc][INFO] 2022-10-17 13:29:59,940: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2022-10-17 13:30:00,040: registered with master
+[rospy.rosout][INFO] 2022-10-17 13:30:00,040: initializing /rosout core topic
+[rospy.rosout][INFO] 2022-10-17 13:30:00,047: connected to core topic /rosout
+[rospy.simtime][INFO] 2022-10-17 13:30:00,049: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2022-10-17 13:30:00,333: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2022-10-17 13:30:00,335: topic[/actual_system/force] adding connection to [/matlab_global_node_79242], count 0
+[rospy.core][INFO] 2022-10-17 13:30:08,297: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2022-10-17 13:30:08,300: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2022-10-17 13:30:08,300: topic[/actual_system/force] removing connection to /matlab_global_node_79242
+[rospy.impl.masterslave][INFO] 2022-10-17 13:30:08,300: signal-2
+[rospy.core][INFO] 2022-10-17 13:33:22,288: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:22,488: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:22,692: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:22,864: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:23,052: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:23,236: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:23,413: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:23,692: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:23,930: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:24,132: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-17 13:33:24,308: signal_shutdown [signal-2]

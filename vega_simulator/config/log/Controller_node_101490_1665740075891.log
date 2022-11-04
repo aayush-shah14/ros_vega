@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2022-10-14 15:04:35,909: init_node, name[/Controller_node_101490_1665740075891], pid[101490]
+[xmlrpc][INFO] 2022-10-14 15:04:35,910: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2022-10-14 15:04:35,910: Started XML-RPC server [http://192.168.1.131:42451/]
+[rospy.impl.masterslave][INFO] 2022-10-14 15:04:35,910: _ready: http://192.168.1.131:42451/
+[rospy.init][INFO] 2022-10-14 15:04:35,910: ROS Slave URI: [http://192.168.1.131:42451/]
+[rospy.registration][INFO] 2022-10-14 15:04:35,910: Registering with master node http://192.168.1.131:11311
+[xmlrpc][INFO] 2022-10-14 15:04:35,910: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2022-10-14 15:04:36,010: registered with master
+[rospy.rosout][INFO] 2022-10-14 15:04:36,011: initializing /rosout core topic
+[rospy.rosout][INFO] 2022-10-14 15:04:36,017: connected to core topic /rosout
+[rospy.simtime][INFO] 2022-10-14 15:04:36,019: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2022-10-14 15:04:36,263: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2022-10-14 15:04:36,265: topic[/actual_system/force] adding connection to [/matlab_global_node_43001], count 0
+[rospy.core][INFO] 2022-10-14 15:04:36,670: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2022-10-14 15:04:36,677: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2022-10-14 15:04:36,678: topic[/actual_system/force] removing connection to /matlab_global_node_43001
+[rospy.impl.masterslave][INFO] 2022-10-14 15:04:36,678: signal-2
+[rospy.core][INFO] 2022-10-14 15:04:36,937: signal_shutdown [signal-2]
+[rospy.core][INFO] 2022-10-14 15:04:37,124: signal_shutdown [signal-2]
+[rosout][INFO] 2022-10-14 15:04:37,272: controller node intialized and has Subscribed to compiled step and publishing to force
+[rosout][INFO] 2022-10-14 15:04:37,273: publishing first command to start the system
+[rospy.core][INFO] 2022-10-14 15:04:37,273: signal_shutdown [atexit]

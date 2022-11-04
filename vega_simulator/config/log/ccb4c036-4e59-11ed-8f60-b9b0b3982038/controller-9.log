@@ -1,0 +1,79 @@
+[rospy.client][INFO] 2022-10-18 01:56:42,898: init_node, name[/controller], pid[7161]
+[xmlrpc][INFO] 2022-10-18 01:56:42,898: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2022-10-18 01:56:42,899: Started XML-RPC server [http://192.168.1.131:35437/]
+[rospy.init][INFO] 2022-10-18 01:56:42,899: ROS Slave URI: [http://192.168.1.131:35437/]
+[rospy.impl.masterslave][INFO] 2022-10-18 01:56:42,899: _ready: http://192.168.1.131:35437/
+[rospy.registration][INFO] 2022-10-18 01:56:42,899: Registering with master node http://192.168.1.131:11311
+[xmlrpc][INFO] 2022-10-18 01:56:42,899: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2022-10-18 01:56:42,999: registered with master
+[rospy.rosout][INFO] 2022-10-18 01:56:43,000: initializing /rosout core topic
+[rospy.rosout][INFO] 2022-10-18 01:56:43,007: connected to core topic /rosout
+[rospy.simtime][INFO] 2022-10-18 01:56:43,010: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2022-10-18 01:56:43,031: topic[/actual_system/state] adding connection to [http://192.168.1.131:33965/], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:43,032: topic[/steps_compiled] adding connection to [http://192.168.1.131:46439/], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:43,280: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:43,282: topic[/virtual_system/force] adding connection to [/virtual_system/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:43,282: topic[/actual_system/force] adding connection to [/actual_system/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:43,282: topic[/step_response1/force] adding connection to [/step_response1/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:43,282: topic[/step_response0/force] adding connection to [/step_response0/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:43,283: topic[/step_response2/force] adding connection to [/step_response2/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:43,283: topic[/step_response3/force] adding connection to [/step_response3/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:43,283: topic[/step_response4/force] adding connection to [/step_response4/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:46,732: topic[/state_eq] adding connection to [/matlab_global_node_10676], count 0
+[rospy.internal][INFO] 2022-10-18 01:56:46,838: topic[/step_eq] adding connection to [/matlab_global_node_10676], count 0
+[rospy.core][INFO] 2022-10-18 05:17:51,496: signal_shutdown [atexit]
+[rospy.internal][INFO] 2022-10-18 05:17:51,499: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2022-10-18 05:17:51,499: topic[/actual_system/force] removing connection to /actual_system/simluator
+[rospy.internal][INFO] 2022-10-18 05:17:51,500: topic[/virtual_system/force] removing connection to /virtual_system/simluator
+[rospy.internal][INFO] 2022-10-18 05:17:51,500: topic[/state_eq] removing connection to /matlab_global_node_10676
+[rospy.internal][INFO] 2022-10-18 05:17:51,500: topic[/step_eq] removing connection to /matlab_global_node_10676
+[rospy.internal][INFO] 2022-10-18 05:17:51,500: topic[/step_response0/force] removing connection to /step_response0/simluator
+[rospy.internal][INFO] 2022-10-18 05:17:51,500: topic[/step_response1/force] removing connection to /step_response1/simluator
+[rospy.internal][INFO] 2022-10-18 05:17:51,500: topic[/step_response2/force] removing connection to /step_response2/simluator
+[rospy.internal][INFO] 2022-10-18 05:17:51,500: topic[/step_response3/force] removing connection to /step_response3/simluator
+[rospy.internal][INFO] 2022-10-18 05:17:51,500: topic[/step_response4/force] removing connection to /step_response4/simluator
+[rospy.internal][INFO] 2022-10-18 05:17:51,500: topic[/steps_compiled] removing connection to http://192.168.1.131:46439/
+[rospy.internal][INFO] 2022-10-18 05:17:51,501: topic[/actual_system/state] removing connection to http://192.168.1.131:33965/
+[rospy.impl.masterslave][INFO] 2022-10-18 05:17:51,501: atexit
+[rospy.client][INFO] 2022-10-18 05:23:53,358: init_node, name[/controller], pid[18849]
+[xmlrpc][INFO] 2022-10-18 05:23:53,358: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2022-10-18 05:23:53,358: Started XML-RPC server [http://192.168.1.131:42179/]
+[rospy.init][INFO] 2022-10-18 05:23:53,358: ROS Slave URI: [http://192.168.1.131:42179/]
+[rospy.impl.masterslave][INFO] 2022-10-18 05:23:53,358: _ready: http://192.168.1.131:42179/
+[rospy.registration][INFO] 2022-10-18 05:23:53,359: Registering with master node http://192.168.1.131:11311
+[xmlrpc][INFO] 2022-10-18 05:23:53,359: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2022-10-18 05:23:53,459: registered with master
+[rospy.rosout][INFO] 2022-10-18 05:23:53,459: initializing /rosout core topic
+[rospy.rosout][INFO] 2022-10-18 05:23:53,464: connected to core topic /rosout
+[rospy.simtime][INFO] 2022-10-18 05:23:53,466: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2022-10-18 05:23:53,501: topic[/actual_system/state] adding connection to [http://192.168.1.131:42813/], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,502: topic[/steps_compiled] adding connection to [http://192.168.1.131:38687/], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,723: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,724: topic[/actual_system/force] adding connection to [/actual_system/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,727: topic[/virtual_system/force] adding connection to [/virtual_system/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,728: topic[/step_response0/force] adding connection to [/step_response0/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,729: topic[/step_response1/force] adding connection to [/step_response1/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,730: topic[/state_eq] adding connection to [/matlab_global_node_10676], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,731: topic[/step_response4/force] adding connection to [/step_response4/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,731: topic[/step_response3/force] adding connection to [/step_response3/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:53,732: topic[/step_response2/force] adding connection to [/step_response2/simluator], count 0
+[rospy.internal][INFO] 2022-10-18 05:23:54,779: topic[/step_eq] adding connection to [/matlab_global_node_10676], count 0
+[rospy.internal][INFO] 2022-10-18 05:24:00,593: topic[/state_eq] removing connection to /matlab_global_node_10676
+[rospy.internal][INFO] 2022-10-18 05:24:00,593: topic[/step_eq] removing connection to /matlab_global_node_10676
+[rospy.internal][INFO] 2022-10-18 05:24:00,972: topic[/step_eq] adding connection to [/matlab_global_node_77348], count 0
+[rospy.internal][INFO] 2022-10-18 05:24:01,002: topic[/state_eq] adding connection to [/matlab_global_node_77348], count 0
+[rospy.core][INFO] 2022-10-18 15:23:08,037: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2022-10-18 15:23:08,042: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2022-10-18 15:23:08,042: topic[/actual_system/force] removing connection to /actual_system/simluator
+[rospy.internal][INFO] 2022-10-18 15:23:08,043: topic[/steps_compiled] removing connection to http://192.168.1.131:38687/
+[rospy.internal][INFO] 2022-10-18 15:23:08,043: topic[/virtual_system/force] removing connection to /virtual_system/simluator
+[rospy.internal][INFO] 2022-10-18 15:23:08,043: topic[/state_eq] removing connection to /matlab_global_node_77348
+[rospy.internal][INFO] 2022-10-18 15:23:08,043: topic[/step_eq] removing connection to /matlab_global_node_77348
+[rospy.internal][INFO] 2022-10-18 15:23:08,043: topic[/step_response0/force] removing connection to /step_response0/simluator
+[rospy.internal][INFO] 2022-10-18 15:23:08,044: topic[/step_response1/force] removing connection to /step_response1/simluator
+[rospy.internal][INFO] 2022-10-18 15:23:08,044: topic[/step_response2/force] removing connection to /step_response2/simluator
+[rospy.internal][INFO] 2022-10-18 15:23:08,044: topic[/step_response3/force] removing connection to /step_response3/simluator
+[rospy.internal][INFO] 2022-10-18 15:23:08,044: topic[/step_response4/force] removing connection to /step_response4/simluator
+[rospy.internal][INFO] 2022-10-18 15:23:08,044: topic[/actual_system/state] removing connection to http://192.168.1.131:42813/
+[rospy.impl.masterslave][INFO] 2022-10-18 15:23:08,044: signal-2
+[rospy.core][INFO] 2022-10-18 15:23:23,056: signal_shutdown [signal-15]

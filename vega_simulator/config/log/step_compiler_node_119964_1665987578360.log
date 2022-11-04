@@ -1,0 +1,19 @@
+[rospy.client][INFO] 2022-10-17 11:49:38,382: init_node, name[/step_compiler_node_119964_1665987578360], pid[119964]
+[xmlrpc][INFO] 2022-10-17 11:49:38,382: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2022-10-17 11:49:38,382: Started XML-RPC server [http://192.168.1.131:38139/]
+[rospy.impl.masterslave][INFO] 2022-10-17 11:49:38,382: _ready: http://192.168.1.131:38139/
+[rospy.init][INFO] 2022-10-17 11:49:38,382: ROS Slave URI: [http://192.168.1.131:38139/]
+[rospy.registration][INFO] 2022-10-17 11:49:38,383: Registering with master node http://192.168.1.131:11311
+[xmlrpc][INFO] 2022-10-17 11:49:38,383: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2022-10-17 11:49:38,483: registered with master
+[rospy.rosout][INFO] 2022-10-17 11:49:38,483: initializing /rosout core topic
+[rospy.rosout][INFO] 2022-10-17 11:49:38,490: connected to core topic /rosout
+[rospy.simtime][INFO] 2022-10-17 11:49:38,492: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2022-10-17 11:49:38,507: Step compiler node intialized and has Subscribed to states
+[rospy.internal][INFO] 2022-10-17 11:49:38,732: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2022-10-17 11:49:38,734: topic[/steps_compiled] adding connection to [/matlab_global_node_14190], count 0
+[rospy.core][INFO] 2022-10-17 11:49:40,191: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2022-10-17 11:49:40,197: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2022-10-17 11:49:40,197: topic[/steps_compiled] removing connection to /matlab_global_node_14190
+[rospy.impl.masterslave][INFO] 2022-10-17 11:49:40,197: signal-2
+[rospy.core][INFO] 2022-10-17 11:49:40,792: signal_shutdown [atexit]
