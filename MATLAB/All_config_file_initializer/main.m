@@ -67,4 +67,4 @@ vegaConfigurationFile();
 nRigidBarAlongWidthStiffness();
 
 %% writing config file for matalb to read while analyzing vega data
-% matlabConfigforReadingData();
+matlabConfigforReadingData();

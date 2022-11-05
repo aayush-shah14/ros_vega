@@ -144,6 +144,7 @@ double * uInitial = nullptr;
 double * velInitial = nullptr;
 double * q_ = nullptr;
 double * q_prev = nullptr;
+double * q_vel = nullptr;
 double * time_force_data = nullptr;
 
 double *moment_ext = nullptr;
@@ -164,55 +165,16 @@ ros::Subscriber sub;
 ros::Subscriber reset_sub;
 ros::Publisher pose_pub;
 ros::Publisher state_pub;
+ros::Publisher slope_pub;
 ros::Publisher episode_reset_pub;
 std_msgs::Float32MultiArray pose_pub_msg;
 std_msgs::Bool reset_msg;
-float x,y;
-
+float x,y,vx,vy;
 
 // interpolation to secondary mesh
 int secondaryDeformableObjectRenderingMesh_interpolation_numElementVertices;
 int * secondaryDeformableObjectRenderingMesh_interpolation_vertices = nullptr;
 double * secondaryDeformableObjectRenderingMesh_interpolation_weights = nullptr;
-
-// for the two force on body
-double x1_support=0.0971*0.5;
-double y1_support=-0.1;
-double x2_support=-0.0511;
-double y2_support=-0.2;
-float f1_loc=0.333333;
-float f2_loc=1;
-int F1=19;
-int F2=26;
-
-// for the given mesh, the parameters are
-double b = 0.05;
-double l = 1;
-double del_x = 0.0125;
-double del_y = 0.0125;
-
-//size of the mesh
-int n_x = (b/del_x) + 1;
-int n_y = (l/del_y) + 1;
-int n_tot = n_x*n_y;
-
-int row_id1 = (f1_loc * l)/del_y;
-int start_index1 = row_id1*n_x ;  //in vega it is +1, but in c we dont need +1
-
-double y1_init = -row_id1*del_y;
-double x1_init = 0.0;
-
-int row_id2 = (f2_loc * l)/del_y;
-int start_index2 = row_id2*n_x ;  //in vega it is +1, but in c we dont need +1
-
-double y2_init = -row_id2*del_y;
-double x2_init = 0.0;
-
-double square(double value)
-{
-    // Multiply value two times
-    return value*value;
-}
 
 void stopDeformations_buttonCallBack(int code);
 
@@ -220,7 +182,7 @@ void stopDeformations_buttonCallBack(int code);
 void resetCallBack(std_msgs::Bool msg)
 {
   if(msg.data == true)
-  { double q_system[3*n_tot]= { 0.0 };
+  { double q_system[3*n]= { 0.0 };
     integratorBaseSparse->SetExternalForces(q_system);
     integratorBaseSparse->SetqState(q_system,q_system,q_system);
   }
@@ -234,91 +196,82 @@ void resetCallBack(std_msgs::Bool msg)
   state_msg.data.push_back(y);
   state_pub.publish(state_msg);
 }
+
 void forceCallBack(const std_msgs::Float32MultiArray msg)
 {
-  // storing prev value
-  q_prev=integratorBase->Getq();
-
-  // Added this for adding forces at each time step
-  F1 = msg.data[0];
-  F2 = msg.data[1];
-
-  double denom1 = sqrt(square(x1_support-x1_init- q_prev[3*(start_index1+3)+0]) + square(y1_support-y1_init- q_prev[3*(start_index1+3)+1]));
-  double denom2 = sqrt(square(x2_support-x2_init- q_prev[3*(start_index2+3)+0]) + square(y2_support-y2_init- q_prev[3*(start_index2+3)+1]));
-
-  double f1_x = F1 * ((x1_support-x1_init - q_prev[3*(start_index1+3)+0])/denom1);
-  double f1_y = F1 * ((y1_support-y1_init - q_prev[3*(start_index1+3)+1])/denom1);
-  // double F1_new = sqrt(square(f1_x) + square(f1_y));
-
-  double f2_x = F2 * ((x2_support-x2_init - q_prev[3*(start_index2+3)+0])/denom2);
-  double f2_y = F2 * ((y2_support-y2_init - q_prev[3*(start_index2+3)+1])/denom2);
-  // double F2_new = sqrt(square(f2_x) + square(f2_y));
-
-  for(int i=0;i<n_x;i+=1)
-  { 
-    if( i == 0 || i==(n_x-1))
-    {
-      // cout<<start_index2+i<<endl;
-      f_ext[3*(start_index1+i)+0] = f1_x/((n_x-2)*2 + 2);
-      f_ext[3*(start_index1+i)+1] = f1_y/((n_x-2)*2 + 2);
-      f_ext[3*(start_index2+i)+0] = f2_x/((n_x-2)*2 + 2);
-      f_ext[3*(start_index2+i)+1] = f2_y/((n_x-2)*2 + 2);
-    }
-    else
-    {
-      f_ext[3*(start_index1+i)+0] = 2*f1_x/((n_x-2)*2 + 2);
-      f_ext[3*(start_index1+i)+1] = 2*f1_y/((n_x-2)*2 + 2);
-      f_ext[3*(start_index2+i)+0] = 2*f2_x/((n_x-2)*2 + 2);
-      f_ext[3*(start_index2+i)+1] = 2*f2_y/((n_x-2)*2 + 2);
-    }
+  for(int section=0;section<nSections;section++)
+  {
+    // calculating the slope of the rigid section and applying moment on that
+    double delta_y=q_[3*moment_location[2*section+1]+1]-q_[3*moment_location[2*section]+1];
+    double delta_x=beamWidth+q_[3*moment_location[2*section+1]]-q_[3*moment_location[2*section]];
+    double section_width=sqrt(delta_x*delta_x+delta_y*delta_y);
+    double F=msg.data[section]/section_width;
+    f_ext[3*moment_location[2*section]+0]=F*delta_y/section_width;
+    f_ext[3*moment_location[2*section]+1]=-F*delta_x/section_width;
+    f_ext[3*moment_location[2*section+1]+0]=-F*delta_y/section_width;
+    f_ext[3*moment_location[2*section+1]+1]=F*delta_x/section_width;
   }
-
   integratorBaseSparse->SetExternalForces(f_ext);
+  ros::Rate rate(1/timeStep);
   for(int i=0; i<substepsPerTimeStep; i++)
-  { 
-  //integratorBaseSparse->SetExternalForces(f_ext);
-  int code = integratorBase->DoTimestep();
-  fflush(nullptr);
-  subTimestepCounter++;
+  {
+    int code = integratorBase->DoTimestep();
+    fflush(nullptr);
+    subTimestepCounter++;
   }
+
   timestepCounter++;
   q_=integratorBase->Getq();
-
-  // calculating the new x and y
+  q_vel=integratorBase->Getqvel();
+  // calculating the new x y vx and vy
   {
     x=0.0;
-    for(int gg=0;gg<n_x;gg++)
+    vx=0.0;
+    for(int gg=0;gg<n_tip_mesh;gg++)
     {
-      if(gg==0 || gg==(n_x-1))
-        x=x+q_[3*(n_tot-n_x+gg)]*2; 
+      if(gg==0 || gg==(n_tip_mesh-1))
+        {x=x+q_[3*(n-n_tip_mesh+gg)]*2;vx=vx+q_vel[3*(n-n_tip_mesh+gg)]*2;}
       else
-        x=x+q_[3*(n_tot-n_x+gg)];
+        {x=x+q_[3*(n-n_tip_mesh+gg)];vx=vx+q_vel[3*(n-n_tip_mesh+gg)];}
     }
-    x=x/(2+n_x);
+    x=x/(2+n_tip_mesh); 
+    vx=vx/(2+n_tip_mesh); 
 
     y=0.0;
-    for(int gg=0;gg<n_x;gg++)
+    vy=0.0;
+    for(int gg=0;gg<n_tip_mesh;gg++)
     {
-      if(gg==0 || gg==(n_x-1))
-        y=y+q_[3*(n_tot-n_x+gg)+1]*2;
+      if(gg==0 || gg==(n_tip_mesh-1))
+        {y=y+q_[3*(n-n_tip_mesh+gg)+1]*2;vy=vy+q_vel[3*(n-n_tip_mesh+gg)+1]*2;}
       else
-        y=y+q_[3*(n_tot-n_x+gg)+1];
+        {y=y+q_[3*(n-n_tip_mesh+gg)+1];vy=vy+q_vel[3*(n-n_tip_mesh+gg)+1];}
     }
-    y=y/(2+n_x);
+    y=y/(2+n_tip_mesh);
+    vy=vy/(2+n_tip_mesh);
   }
 
+  std_msgs::Float32MultiArray slope_msg;
+  // caluculating the slope at the tip
+  for(int section=0;section<nSections;section++)
+  {
+    double delta_y=q_[3*moment_location[2*section+1]+1]-q_[3*moment_location[2*section]+1];
+    double delta_x=beamWidth+q_[3*moment_location[2*section+1]]-q_[3*moment_location[2*section]];
+    double slope=atan2(delta_y,delta_x);
+    slope_msg.data.push_back(slope);
+  }  
+
   std_msgs::Float32MultiArray state_msg;
-  //for(int i=0;i<n;i++)
-  //{
-  //  state_msg.data.push_back(q_[3*i]);
-  //  state_msg.data.push_back(q_[3*i+1]);
-  //}
-  state_msg.data.push_back(x);
-  state_msg.data.push_back(y);
+  for(int i=0;i<n;i++)
+  {
+    state_msg.data.push_back(q_[3*i]);  
+    state_msg.data.push_back(q_[3*i+1]);
+  }  
   ros::spinOnce();
+  rate.sleep();
   state_pub.publish(state_msg);
-  //pose_pub_msg.data={x};
-  //pose_pub.publish(pose_pub_msg);
+  pose_pub_msg.data={x,y};
+  pose_pub.publish(pose_pub_msg);
+  slope_pub.publish(slope_msg);
 }
 
 // called periodically by GLUT:
@@ -326,12 +279,17 @@ void idleFunction(void)
 {
   ros::NodeHandle node_handle;
   cout.precision(10);
+
+  // subscribers
   sub = node_handle.subscribe("force", 1, forceCallBack);
   reset_sub = node_handle.subscribe("reset",1,resetCallBack);
   cout<<"node initialized. Subscribed to force"<<endl;
 
+  // publishers
   //episode_reset_pub = node_handle.advertise<std_msgs::Bool>("reset", 1);
-  state_pub= node_handle.advertise<std_msgs::Float32MultiArray>("state", 1);
+  slope_pub= node_handle.advertise<std_msgs::Float32MultiArray>("slopes", 1);
+  pose_pub= node_handle.advertise<std_msgs::Float32MultiArray>("state", 1); 
+  state_pub= node_handle.advertise<std_msgs::Float32MultiArray>("complete_state", 1);
 
   // reset external forces (usually to zero)
   memcpy(f_ext, f_extBase, sizeof(double) * 3 * n);
@@ -476,6 +434,7 @@ void initSimulation()
   f_extBase = (double*) calloc (3*n, sizeof(double));
   q_ = (double*) calloc (3*n, sizeof(double));
   q_prev = (double*) calloc (3*n, sizeof(double));
+  q_vel = (double*) calloc (3*n, sizeof(double));
 
   // load initial condition
   if (strcmp(initialPositionFilename, "__none") != 0)
@@ -954,8 +913,8 @@ int main(int argc, char* argv[])
 {
   ros::init(argc, argv, "vega_simulator");
   // parse command line options
-  timeStep=0.1;
-  substepsPerTimeStep=5;
+  timeStep=stof(argv[1]);
+  substepsPerTimeStep=stoi(argv[2]);
 
   char configFilenameC[4096]="beam3_vox_massspring.config" ;
 

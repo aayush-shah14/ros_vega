@@ -7,7 +7,7 @@ function[]=matlabConfigforReadingData()
     str=str+(meshSize+1)+",";
     str=str+Beam_width;
     Lines=[str];
-	fid = fopen('../analysingVegaData/config.csv', 'wt');
+	fid = fopen('../ros_data/config.csv', 'wt');
 	fprintf(fid,'%s\n',Lines);
 	fclose(fid);
 	disp("matlab config file has been created")

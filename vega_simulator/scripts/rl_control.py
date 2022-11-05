@@ -16,15 +16,15 @@ from gym import spaces
 
 class vega_env(gym.Env):
 
-  # Because of google colab, we cannot implement the GUI ('human' render mode)
-      metadata = {'render.modes': ['console']}
+    # Because of google colab, we cannot implement the GUI ('human' render mode)
+    metadata = {'render.modes': ['console']}
 
-      # Define constants for clearer code
-      def __init__(self, n_nodes):
+    # Define constants for clearer code
+    def __init__(self, n_nodes):
         super(vega_env, self).__init__()
-        
         self.nodes=n_nodes
         self.l = 1.0
+
         #creating all publishers
         self.force_pub=rospy.Publisher("/actual_system/force",Float32MultiArray,queue_size=1)
         self.episode_reset_pub = rospy.Publisher("/actual_system/reset",Bool,queue_size=1)
@@ -47,14 +47,14 @@ class vega_env(gym.Env):
         #starting the controller by starting with zero input for first timestep so that step is obtained for next step
         self.forces_msg.data=np.zeros(shape=(2,))
 
-      def state_callback(self,msg):
+    def state_callback(self,msg):
 
         #get current state
         rospy.loginfo('this is getting called')
         rospy.loginfo(msg.data)
         self.measured_state=np.array(msg.data).reshape((2,))
 
-      def reset(self):
+    def reset(self):
         """
         Important: the observation must be a numpy array
         :return: (np.array)
@@ -62,13 +62,13 @@ class vega_env(gym.Env):
         # Initialize the agent at position to default
         self.reset_msg.data = True
         self.episode_reset_pub.publish(self.reset_msg)
-        
+
         rospy.Subscriber("/actual_system/state",Float32MultiArray,self.state_callback,queue_size=1) #check if callin subscriber is required here
 
         # observation should match observation space
         return np.array([self.measured_state[0],self.measured_state[1]]).astype(np.float32)
 
-      def step(self, action):
+    def step(self, action):
 
         self.forces_msg.data=action
         self.force_pub.publish(self.forces_msg)
@@ -93,20 +93,17 @@ class vega_env(gym.Env):
         info = {}
         return np.array([x, y]).astype(np.float32), reward, done, info
 
-      # def render(self, mode='console'):
-      #   if mode != 'console':
-      #     raise NotImplementedError()
+    # def render(self, mode='console'):
+        # if mode != 'console':
+            # raise NotImplementedError()
         # # agent is represented as a cross, rest as a dot
         # print("." * self.agent_pos, end="")
         # print("x", end="")
         # print("." * (self.grid_size - self.agent_pos))
 
-      def close(self):
+    def close(self):
         pass
 
-
-def callback(msg):
-  rospy.loginfo(msg.data)
 if __name__ == '__main__':
 
     rospy.init_node('Controller_node', anonymous = True)
@@ -124,17 +121,16 @@ if __name__ == '__main__':
     n_steps = 200
     r=rospy.Rate(1)
     for step in range(n_steps):
-      #action, _ = model.predict(obs, deterministic=True)
-      action = np.array([2000,1900])
-      print("Step {}".format(step + 1))
-      print("Action: ", action)
-      obs, reward, done, info = env.step(action)
-      #rospy.Subscriber("/actual_system/state",Float32MultiArray,callback,queue_size=1)
-      print('obs=', obs, 'reward=', reward, 'done=', done)
-      #env.render(mode='console')
-      if done:
-    # Note that the VecEnv resets automatically
-    # when a done signal is encountered
+        #action, _ = model.predict(obs, deterministic=True)
+        action = np.array([2000,1900])
+        print("Step {}".format(step + 1))
+        print("Action: ", action)
+        obs, reward, done, info = env.step(action)
+        print('obs=', obs, 'reward=', reward, 'done=', done)
+        #env.render(mode='console')
+        if done:
+        # Note that the VecEnv resets automatically
+        # when a done signal is encountered
         print("Goal reached!", "reward=", reward)
         break
-      r.sleep()
+        r.sleep()

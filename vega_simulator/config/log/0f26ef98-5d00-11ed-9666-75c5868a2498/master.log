@@ -1,0 +1,176 @@
+[rosmaster.main][INFO] 2022-11-05 17:20:35,741: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2022-11-05 17:20:35,741: Starting ROS Master Node
+[xmlrpc][INFO] 2022-11-05 17:20:35,743: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2022-11-05 17:20:35,743: Started XML-RPC server [http://robo:11311/]
+[rosmaster.master][INFO] 2022-11-05 17:20:35,743: Master initialized: port[11311], uri[http://robo:11311/]
+[xmlrpc][INFO] 2022-11-05 17:20:35,743: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2022-11-05 17:20:35,774: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2022-11-05 17:20:35,774: +PARAM [/roslaunch/uris/host_robo__36321] by /roslaunch
+[rosmaster.master][INFO] 2022-11-05 17:20:35,818: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2022-11-05 17:20:35,818: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2022-11-05 17:20:35,835: +SERVICE [/rosout/get_loggers] /rosout http://robo:45681/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,836: +SERVICE [/rosout/set_logger_level] /rosout http://robo:45681/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,836: +PUB [/rosout_agg] /rosout http://robo:45681/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,838: +SUB [/rosout] /rosout http://robo:45681/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,841: +PUB [/rosout] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,842: +SERVICE [/actual_system/simluator/get_loggers] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,842: +SERVICE [/actual_system/simluator/set_logger_level] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,843: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/']
+[rosmaster.master][INFO] 2022-11-05 17:20:35,845: +SUB [/actual_system/force] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,846: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:20:35,847: +SUB [/actual_system/reset] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,847: +PUB [/actual_system/slopes] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,847: +PUB [/actual_system/state] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:20:35,847: +PUB [/actual_system/complete_state] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:23:06,126: +PUB [/rosout] /Controller_node_13618_1667649185988 http://robo:32807/
+[rosmaster.master][INFO] 2022-11-05 17:23:06,131: +SERVICE [/Controller_node_13618_1667649185988/get_loggers] /Controller_node_13618_1667649185988 http://robo:32807/
+[rosmaster.master][INFO] 2022-11-05 17:23:06,133: +SERVICE [/Controller_node_13618_1667649185988/set_logger_level] /Controller_node_13618_1667649185988 http://robo:32807/
+[rosmaster.master][INFO] 2022-11-05 17:23:06,206: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:32807/']
+[rosmaster.master][INFO] 2022-11-05 17:23:06,207: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:32807/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:23:06,293: -PUB [/rosout] /Controller_node_13618_1667649185988 http://robo:32807/
+[rosmaster.master][INFO] 2022-11-05 17:23:06,293: -SERVICE [/Controller_node_13618_1667649185988/get_loggers] /Controller_node_13618_1667649185988 rosrpc://robo:33491
+[rosmaster.master][INFO] 2022-11-05 17:23:06,293: -SERVICE [/Controller_node_13618_1667649185988/set_logger_level] /Controller_node_13618_1667649185988 rosrpc://robo:33491
+[rosmaster.master][INFO] 2022-11-05 17:23:06,306: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/']
+[rosmaster.master][INFO] 2022-11-05 17:23:06,308: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:03,115: +PUB [/rosout] /Controller_node_13824_1667649242976 http://robo:36419/
+[rosmaster.master][INFO] 2022-11-05 17:24:03,120: +SERVICE [/Controller_node_13824_1667649242976/get_loggers] /Controller_node_13824_1667649242976 http://robo:36419/
+[rosmaster.master][INFO] 2022-11-05 17:24:03,122: +SERVICE [/Controller_node_13824_1667649242976/set_logger_level] /Controller_node_13824_1667649242976 http://robo:36419/
+[rosmaster.master][INFO] 2022-11-05 17:24:03,203: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36419/']
+[rosmaster.master][INFO] 2022-11-05 17:24:03,204: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36419/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:03,223: -PUB [/rosout] /Controller_node_13824_1667649242976 http://robo:36419/
+[rosmaster.master][INFO] 2022-11-05 17:24:03,223: -SERVICE [/Controller_node_13824_1667649242976/get_loggers] /Controller_node_13824_1667649242976 rosrpc://robo:44099
+[rosmaster.master][INFO] 2022-11-05 17:24:03,223: -SERVICE [/Controller_node_13824_1667649242976/set_logger_level] /Controller_node_13824_1667649242976 rosrpc://robo:44099
+[rosmaster.master][INFO] 2022-11-05 17:24:03,303: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/']
+[rosmaster.master][INFO] 2022-11-05 17:24:03,305: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:08,700: +PUB [/rosout] /Controller_node_13867_1667649248562 http://robo:45161/
+[rosmaster.master][INFO] 2022-11-05 17:24:08,706: +SERVICE [/Controller_node_13867_1667649248562/get_loggers] /Controller_node_13867_1667649248562 http://robo:45161/
+[rosmaster.master][INFO] 2022-11-05 17:24:08,708: +SERVICE [/Controller_node_13867_1667649248562/set_logger_level] /Controller_node_13867_1667649248562 http://robo:45161/
+[rosmaster.master][INFO] 2022-11-05 17:24:08,709: +PUB [/actual_system/force] /Controller_node_13867_1667649248562 http://robo:45161/
+[rosmaster.master][INFO] 2022-11-05 17:24:08,712: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/']
+[rosmaster.master][INFO] 2022-11-05 17:24:08,713: publisherUpdate[/actual_system/force] -> http://robo:45795/ ['http://robo:45161/']
+[rosmaster.master][INFO] 2022-11-05 17:24:08,714: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:08,716: publisherUpdate[/actual_system/force] -> http://robo:45795/ ['http://robo:45161/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:19,942: +PUB [/rosout] /rostopic_13998_1667649259808 http://robo:34191/
+[rosmaster.master][INFO] 2022-11-05 17:24:19,943: +SERVICE [/rostopic_13998_1667649259808/get_loggers] /rostopic_13998_1667649259808 http://robo:34191/
+[rosmaster.master][INFO] 2022-11-05 17:24:19,943: +SERVICE [/rostopic_13998_1667649259808/set_logger_level] /rostopic_13998_1667649259808 http://robo:34191/
+[rosmaster.master][INFO] 2022-11-05 17:24:19,946: +SUB [/actual_system/force] /rostopic_13998_1667649259808 http://robo:34191/
+[rosmaster.master][INFO] 2022-11-05 17:24:20,027: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/', 'http://robo:34191/']
+[rosmaster.master][INFO] 2022-11-05 17:24:20,027: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/', 'http://robo:34191/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:21,841: -SUB [/actual_system/force] /rostopic_13998_1667649259808 http://robo:34191/
+[rosmaster.master][INFO] 2022-11-05 17:24:21,841: -PUB [/rosout] /rostopic_13998_1667649259808 http://robo:34191/
+[rosmaster.master][INFO] 2022-11-05 17:24:21,841: -SERVICE [/rostopic_13998_1667649259808/get_loggers] /rostopic_13998_1667649259808 rosrpc://robo:44295
+[rosmaster.master][INFO] 2022-11-05 17:24:21,841: -SERVICE [/rostopic_13998_1667649259808/set_logger_level] /rostopic_13998_1667649259808 rosrpc://robo:44295
+[rosmaster.master][INFO] 2022-11-05 17:24:21,929: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/']
+[rosmaster.master][INFO] 2022-11-05 17:24:21,930: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:30,959: +PUB [/rosout] /rostopic_14138_1667649270822 http://robo:36635/
+[rosmaster.master][INFO] 2022-11-05 17:24:30,961: +SERVICE [/rostopic_14138_1667649270822/get_loggers] /rostopic_14138_1667649270822 http://robo:36635/
+[rosmaster.master][INFO] 2022-11-05 17:24:30,961: +SERVICE [/rostopic_14138_1667649270822/set_logger_level] /rostopic_14138_1667649270822 http://robo:36635/
+[rosmaster.master][INFO] 2022-11-05 17:24:30,963: +SUB [/actual_system/state] /rostopic_14138_1667649270822 http://robo:36635/
+[rosmaster.master][INFO] 2022-11-05 17:24:31,040: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/', 'http://robo:36635/']
+[rosmaster.master][INFO] 2022-11-05 17:24:31,041: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/', 'http://robo:36635/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:33,255: +PUB [/rosout] /rostopic_14175_1667649273123 http://robo:43991/
+[rosmaster.master][INFO] 2022-11-05 17:24:33,256: +SERVICE [/rostopic_14175_1667649273123/get_loggers] /rostopic_14175_1667649273123 http://robo:43991/
+[rosmaster.master][INFO] 2022-11-05 17:24:33,257: +SERVICE [/rostopic_14175_1667649273123/set_logger_level] /rostopic_14175_1667649273123 http://robo:43991/
+[rosmaster.master][INFO] 2022-11-05 17:24:33,258: +SUB [/actual_system/force] /rostopic_14175_1667649273123 http://robo:43991/
+[rosmaster.master][INFO] 2022-11-05 17:24:33,343: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/', 'http://robo:36635/', 'http://robo:43991/']
+[rosmaster.master][INFO] 2022-11-05 17:24:33,344: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/', 'http://robo:36635/', 'http://robo:43991/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:37,149: -SUB [/actual_system/force] /rostopic_14175_1667649273123 http://robo:43991/
+[rosmaster.master][INFO] 2022-11-05 17:24:37,149: -PUB [/rosout] /rostopic_14175_1667649273123 http://robo:43991/
+[rosmaster.master][INFO] 2022-11-05 17:24:37,149: -SERVICE [/rostopic_14175_1667649273123/get_loggers] /rostopic_14175_1667649273123 rosrpc://robo:35659
+[rosmaster.master][INFO] 2022-11-05 17:24:37,149: -SERVICE [/rostopic_14175_1667649273123/set_logger_level] /rostopic_14175_1667649273123 rosrpc://robo:35659
+[rosmaster.master][INFO] 2022-11-05 17:24:37,248: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/', 'http://robo:36635/']
+[rosmaster.master][INFO] 2022-11-05 17:24:37,248: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:45161/', 'http://robo:36635/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:47,389: -PUB [/rosout] /Controller_node_13867_1667649248562 http://robo:45161/
+[rosmaster.master][INFO] 2022-11-05 17:24:47,389: -PUB [/actual_system/force] /Controller_node_13867_1667649248562 http://robo:45161/
+[rosmaster.master][INFO] 2022-11-05 17:24:47,389: -SERVICE [/Controller_node_13867_1667649248562/get_loggers] /Controller_node_13867_1667649248562 rosrpc://robo:34643
+[rosmaster.master][INFO] 2022-11-05 17:24:47,389: -SERVICE [/Controller_node_13867_1667649248562/set_logger_level] /Controller_node_13867_1667649248562 rosrpc://robo:34643
+[rosmaster.master][INFO] 2022-11-05 17:24:47,459: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/']
+[rosmaster.master][INFO] 2022-11-05 17:24:47,460: publisherUpdate[/actual_system/force] -> http://robo:45795/ []
+[rosmaster.master][INFO] 2022-11-05 17:24:47,460: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:47,461: publisherUpdate[/actual_system/force] -> http://robo:45795/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:50,720: +PUB [/rosout] /rostopic_14251_1667649290560 http://robo:46063/
+[rosmaster.master][INFO] 2022-11-05 17:24:50,725: +SERVICE [/rostopic_14251_1667649290560/get_loggers] /rostopic_14251_1667649290560 http://robo:46063/
+[rosmaster.master][INFO] 2022-11-05 17:24:50,727: +SERVICE [/rostopic_14251_1667649290560/set_logger_level] /rostopic_14251_1667649290560 http://robo:46063/
+[rosmaster.master][INFO] 2022-11-05 17:24:50,734: +SUB [/actual_system/force] /rostopic_14251_1667649290560 http://robo:46063/
+[rosmaster.master][INFO] 2022-11-05 17:24:50,765: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:46063/']
+[rosmaster.master][INFO] 2022-11-05 17:24:50,767: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:46063/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:52,431: +PUB [/rosout] /Controller_node_14286_1667649292304 http://robo:33537/
+[rosmaster.master][INFO] 2022-11-05 17:24:52,436: +SERVICE [/Controller_node_14286_1667649292304/get_loggers] /Controller_node_14286_1667649292304 http://robo:33537/
+[rosmaster.master][INFO] 2022-11-05 17:24:52,438: +SERVICE [/Controller_node_14286_1667649292304/set_logger_level] /Controller_node_14286_1667649292304 http://robo:33537/
+[rosmaster.master][INFO] 2022-11-05 17:24:52,439: +PUB [/actual_system/force] /Controller_node_14286_1667649292304 http://robo:33537/
+[rosmaster.master][INFO] 2022-11-05 17:24:52,468: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:46063/', 'http://robo:33537/']
+[rosmaster.master][INFO] 2022-11-05 17:24:52,469: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:46063/', 'http://robo:33537/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:52,469: publisherUpdate[/actual_system/force] -> http://robo:45795/ ['http://robo:33537/']
+[rosmaster.master][INFO] 2022-11-05 17:24:52,470: publisherUpdate[/actual_system/force] -> http://robo:46063/ ['http://robo:33537/']
+[rosmaster.master][INFO] 2022-11-05 17:24:52,470: publisherUpdate[/actual_system/force] -> http://robo:45795/ ['http://robo:33537/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:24:52,471: publisherUpdate[/actual_system/force] -> http://robo:46063/ ['http://robo:33537/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:25:27,505: -PUB [/rosout] /Controller_node_14286_1667649292304 http://robo:33537/
+[rosmaster.master][INFO] 2022-11-05 17:25:27,505: -PUB [/actual_system/force] /Controller_node_14286_1667649292304 http://robo:33537/
+[rosmaster.master][INFO] 2022-11-05 17:25:27,506: -SERVICE [/Controller_node_14286_1667649292304/get_loggers] /Controller_node_14286_1667649292304 rosrpc://robo:45511
+[rosmaster.master][INFO] 2022-11-05 17:25:27,506: -SERVICE [/Controller_node_14286_1667649292304/set_logger_level] /Controller_node_14286_1667649292304 rosrpc://robo:45511
+[rosmaster.master][INFO] 2022-11-05 17:25:27,510: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:46063/']
+[rosmaster.master][INFO] 2022-11-05 17:25:27,510: publisherUpdate[/actual_system/force] -> http://robo:45795/ []
+[rosmaster.master][INFO] 2022-11-05 17:25:27,510: publisherUpdate[/actual_system/force] -> http://robo:46063/ []
+[rosmaster.master][INFO] 2022-11-05 17:25:27,511: publisherUpdate[/actual_system/force] -> http://robo:45795/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:25:27,511: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:46063/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:25:27,512: publisherUpdate[/actual_system/force] -> http://robo:46063/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:25:35,702: -SUB [/actual_system/force] /rostopic_14251_1667649290560 http://robo:46063/
+[rosmaster.master][INFO] 2022-11-05 17:25:35,702: -PUB [/rosout] /rostopic_14251_1667649290560 http://robo:46063/
+[rosmaster.master][INFO] 2022-11-05 17:25:35,702: -SERVICE [/rostopic_14251_1667649290560/get_loggers] /rostopic_14251_1667649290560 rosrpc://robo:35687
+[rosmaster.master][INFO] 2022-11-05 17:25:35,702: -SERVICE [/rostopic_14251_1667649290560/set_logger_level] /rostopic_14251_1667649290560 rosrpc://robo:35687
+[rosmaster.master][INFO] 2022-11-05 17:25:35,725: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/']
+[rosmaster.master][INFO] 2022-11-05 17:25:35,727: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:29:46,133: +PUB [/rosout] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:29:46,133: +SERVICE [/matlab_global_node_47151/get_loggers] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:29:46,133: +SERVICE [/matlab_global_node_47151/set_logger_level] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:29:46,134: +PUB [/tf] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:29:46,149: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:35247/']
+[rosmaster.master][INFO] 2022-11-05 17:29:46,150: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:35247/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:29:46,473: +SUB [/actual_system/state] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:29:46,524: +SUB [/actual_system/complete_state] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:29:46,553: +SUB [/actual_system/force] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,124: -SUB [/actual_system/state] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,127: -SUB [/actual_system/complete_state] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,129: -SUB [/actual_system/force] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,293: -PUB [/rosout] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,293: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/']
+[rosmaster.master][INFO] 2022-11-05 17:30:13,293: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:30:13,294: -PUB [/tf] /matlab_global_node_47151 http://robo:35247/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,294: -SERVICE [/matlab_global_node_47151/get_loggers] /matlab_global_node_47151 rosrpc://robo:38123
+[rosmaster.master][INFO] 2022-11-05 17:30:13,294: -SERVICE [/matlab_global_node_47151/set_logger_level] /matlab_global_node_47151 rosrpc://robo:38123
+[rosmaster.master][INFO] 2022-11-05 17:30:13,567: +PUB [/rosout] /matlab_global_node_35070 http://robo:33251/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,568: +SERVICE [/matlab_global_node_35070/get_loggers] /matlab_global_node_35070 http://robo:33251/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,568: +SERVICE [/matlab_global_node_35070/set_logger_level] /matlab_global_node_35070 http://robo:33251/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,569: +PUB [/tf] /matlab_global_node_35070 http://robo:33251/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,593: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:33251/']
+[rosmaster.master][INFO] 2022-11-05 17:30:13,594: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:36635/', 'http://robo:33251/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:30:13,604: +SUB [/actual_system/state] /matlab_global_node_35070 http://robo:33251/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,654: +SUB [/actual_system/complete_state] /matlab_global_node_35070 http://robo:33251/
+[rosmaster.master][INFO] 2022-11-05 17:30:13,671: +SUB [/actual_system/force] /matlab_global_node_35070 http://robo:33251/
+[rosmaster.master][INFO] 2022-11-05 17:30:28,513: -SUB [/actual_system/state] /rostopic_14138_1667649270822 http://robo:36635/
+[rosmaster.master][INFO] 2022-11-05 17:30:28,513: -PUB [/rosout] /rostopic_14138_1667649270822 http://robo:36635/
+[rosmaster.master][INFO] 2022-11-05 17:30:28,513: -SERVICE [/rostopic_14138_1667649270822/get_loggers] /rostopic_14138_1667649270822 rosrpc://robo:37083
+[rosmaster.master][INFO] 2022-11-05 17:30:28,514: -SERVICE [/rostopic_14138_1667649270822/set_logger_level] /rostopic_14138_1667649270822 rosrpc://robo:37083
+[rosmaster.master][INFO] 2022-11-05 17:30:28,516: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:33251/']
+[rosmaster.master][INFO] 2022-11-05 17:30:28,518: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:45795/', 'http://robo:33251/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:30:30,519: -PUB [/rosout] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:30:30,519: -PUB [/actual_system/slopes] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:30:30,520: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:33251/']
+[rosmaster.master][INFO] 2022-11-05 17:30:30,520: -PUB [/actual_system/state] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:30:30,520: publisherUpdate[/rosout] -> http://robo:45681/ ['http://robo:33251/']: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:30:30,520: -PUB [/actual_system/complete_state] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:30:30,520: publisherUpdate[/actual_system/state] -> http://robo:33251/ []
+[rosmaster.master][INFO] 2022-11-05 17:30:30,521: -SUB [/actual_system/force] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:30:30,521: -SUB [/actual_system/reset] /actual_system/simluator http://robo:45795/
+[rosmaster.master][INFO] 2022-11-05 17:30:30,521: publisherUpdate[/actual_system/state] -> http://robo:33251/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:30:30,522: -SERVICE [/actual_system/simluator/get_loggers] /actual_system/simluator rosrpc://robo:38169
+[rosmaster.master][INFO] 2022-11-05 17:30:30,522: publisherUpdate[/actual_system/complete_state] -> http://robo:33251/ []
+[rosmaster.master][INFO] 2022-11-05 17:30:30,522: -SERVICE [/actual_system/simluator/set_logger_level] /actual_system/simluator rosrpc://robo:38169
+[rosmaster.master][INFO] 2022-11-05 17:30:30,522: publisherUpdate[/actual_system/complete_state] -> http://robo:33251/ []: sec=0.00, result=[1, '', 0]
+[rosmaster.master][INFO] 2022-11-05 17:30:30,721: -PUB [/rosout_agg] /rosout http://robo:45681/
+[rosmaster.master][INFO] 2022-11-05 17:30:30,721: -SUB [/rosout] /rosout http://robo:45681/
+[rosmaster.master][INFO] 2022-11-05 17:30:30,721: -SERVICE [/rosout/get_loggers] /rosout rosrpc://robo:60103
+[rosmaster.master][INFO] 2022-11-05 17:30:30,722: -SERVICE [/rosout/set_logger_level] /rosout rosrpc://robo:60103
+[rosmaster.main][INFO] 2022-11-05 17:30:30,790: keyboard interrupt, will exit
+[rosmaster.main][INFO] 2022-11-05 17:30:30,791: stopping master...
+[rospy.core][INFO] 2022-11-05 17:30:30,791: signal_shutdown [atexit]
